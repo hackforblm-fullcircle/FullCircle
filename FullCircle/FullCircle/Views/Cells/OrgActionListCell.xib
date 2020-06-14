@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="OrgActionListCell" rowHeight="68" id="OS9-An-dqc" customClass="OrgActionListCell" customModule="FullCircle" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="349" height="68"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OS9-An-dqc" id="YRT-OZ-9gz">
+                <rect key="frame" x="0.0" y="0.0" width="349" height="68"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="T4i-LJ-lDH">
+                        <rect key="frame" x="24" y="12" width="301" height="44"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hNf-AA-Djp">
+                                <rect key="frame" x="0.0" y="0.0" width="217.5" height="44"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ie5-nv-obg" customClass="FCSubHeaderLabel" customModule="FullCircle" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="217.5" height="44"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="ie5-nv-obg" firstAttribute="top" secondItem="hNf-AA-Djp" secondAttribute="top" id="2jC-bu-nmr"/>
+                                    <constraint firstAttribute="trailing" secondItem="ie5-nv-obg" secondAttribute="trailing" id="bk7-Ie-A7c"/>
+                                    <constraint firstItem="ie5-nv-obg" firstAttribute="leading" secondItem="hNf-AA-Djp" secondAttribute="leading" id="iWa-De-0LS"/>
+                                    <constraint firstAttribute="bottom" secondItem="ie5-nv-obg" secondAttribute="bottom" id="qBv-lR-l2i"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VYH-Ex-ENG">
+                                <rect key="frame" x="229.5" y="0.0" width="71.5" height="44"/>
+                                <color key="tintColor" red="0.87243150680000003" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="bookmark" catalog="system"/>
+                            </button>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="T4i-LJ-lDH" firstAttribute="leading" secondItem="YRT-OZ-9gz" secondAttribute="leading" constant="24" id="QH2-0d-ZMp"/>
+                    <constraint firstAttribute="bottom" secondItem="T4i-LJ-lDH" secondAttribute="bottom" constant="12" id="Ttv-zN-4SH"/>
+                    <constraint firstItem="T4i-LJ-lDH" firstAttribute="top" secondItem="YRT-OZ-9gz" secondAttribute="top" constant="12" id="nmh-RI-IIi"/>
+                    <constraint firstAttribute="trailing" secondItem="T4i-LJ-lDH" secondAttribute="trailing" constant="24" id="qZQ-g3-7po"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="actionNAmeLabel" destination="ie5-nv-obg" id="uLs-zO-ezE"/>
+            </connections>
+            <point key="canvasLocation" x="-76" y="-100"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="bookmark" catalog="system" width="112" height="128"/>
+    </resources>
+</document>

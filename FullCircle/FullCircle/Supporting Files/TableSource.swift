@@ -10,21 +10,16 @@ import Foundation
 
 import CellDataCoupler
 
-protocol TableDelegate: class {
-}
-
 class TableSource: CouplerTableSource {
     
-    weak var delegate: TableDelegate?
     
-    init(with tableView: UITableView, delegate: TableDelegate? = nil) {
+    override init(with tableView: UITableView) {
         super.init(with: tableView)
-        self.delegate = delegate
-
-        tableView.tableFooterView = UIView()
+        
+        tableView.separatorStyle = .none
         tableView.backgroundColor = .white
         tableView.showsVerticalScrollIndicator = false
         tableView.showsHorizontalScrollIndicator = false
-        tableView.separatorStyle = .none
     }
+
 }

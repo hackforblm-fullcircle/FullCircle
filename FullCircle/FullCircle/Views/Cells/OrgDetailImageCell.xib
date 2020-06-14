@@ -19,6 +19,7 @@
                         <rect key="frame" x="24" y="24" width="332" height="198"/>
                     </imageView>
                 </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="lN9-Bn-rj6" firstAttribute="leading" secondItem="YRT-OZ-9gz" secondAttribute="leading" constant="24" id="9gc-1d-grr"/>
                     <constraint firstAttribute="trailing" secondItem="lN9-Bn-rj6" secondAttribute="trailing" constant="24" id="WlK-DO-h3W"/>

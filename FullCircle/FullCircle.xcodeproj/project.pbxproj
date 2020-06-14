@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		48A8295E2496A80D008D9359 /* OrgDetailImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A8295C2496A80C008D9359 /* OrgDetailImageCell.swift */; };
 		48A8295F2496A80D008D9359 /* OrgDetailImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48A8295D2496A80C008D9359 /* OrgDetailImageCell.xib */; };
+		48A829622496BA1B008D9359 /* OrgActionListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A829602496BA1B008D9359 /* OrgActionListCell.swift */; };
+		48A829632496BA1B008D9359 /* OrgActionListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48A829612496BA1B008D9359 /* OrgActionListCell.xib */; };
 		48B331D524953095007080C7 /* TableSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B331D424953095007080C7 /* TableSource.swift */; };
 		48B331D724953254007080C7 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B331D624953254007080C7 /* BaseTableViewCell.swift */; };
 		48B331DA24967DC6007080C7 /* OrgDetailActionListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B331D824967DC6007080C7 /* OrgDetailActionListCell.swift */; };
@@ -84,6 +86,8 @@
 		397BAF6C151D48409376AFF4 /* Pods-FullCircle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FullCircle.release.xcconfig"; path = "Target Support Files/Pods-FullCircle/Pods-FullCircle.release.xcconfig"; sourceTree = "<group>"; };
 		48A8295C2496A80C008D9359 /* OrgDetailImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgDetailImageCell.swift; sourceTree = "<group>"; };
 		48A8295D2496A80C008D9359 /* OrgDetailImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrgDetailImageCell.xib; sourceTree = "<group>"; };
+		48A829602496BA1B008D9359 /* OrgActionListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgActionListCell.swift; sourceTree = "<group>"; };
+		48A829612496BA1B008D9359 /* OrgActionListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrgActionListCell.xib; sourceTree = "<group>"; };
 		48B331D424953095007080C7 /* TableSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableSource.swift; sourceTree = "<group>"; };
 		48B331D624953254007080C7 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		48B331D824967DC6007080C7 /* OrgDetailActionListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgDetailActionListCell.swift; sourceTree = "<group>"; };
@@ -184,6 +188,8 @@
 				48B331E124967FEF007080C7 /* OrgDetailContactCell.xib */,
 				48A8295C2496A80C008D9359 /* OrgDetailImageCell.swift */,
 				48A8295D2496A80C008D9359 /* OrgDetailImageCell.xib */,
+				48A829602496BA1B008D9359 /* OrgActionListCell.swift */,
+				48A829612496BA1B008D9359 /* OrgActionListCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -494,6 +500,7 @@
 				48B331E324967FF0007080C7 /* OrgDetailContactCell.xib in Resources */,
 				48B331DF24967DF5007080C7 /* OrgDetailButtonCell.xib in Resources */,
 				EAE711562494487D00418D64 /* LaunchScreen.storyboard in Resources */,
+				48A829632496BA1B008D9359 /* OrgActionListCell.xib in Resources */,
 				EAE711532494487D00418D64 /* Assets.xcassets in Resources */,
 				48B4CA3D2495292C007B621E /* OrgDetailCell.xib in Resources */,
 				48B331DB24967DC6007080C7 /* OrgDetailActionListCell.xib in Resources */,
@@ -604,6 +611,7 @@
 				EA2B42BE2495B98800136D4F /* ProfileViewController+TableView.swift in Sources */,
 				EA2B42C02495BD7A00136D4F /* ProfileViewController+Constraints.swift in Sources */,
 				EA2B42DB249689BD00136D4F /* FCCellView.swift in Sources */,
+				48A829622496BA1B008D9359 /* OrgActionListCell.swift in Sources */,
 				EA2B42D224967D5A00136D4F /* FCSubHeaderLabel.swift in Sources */,
 				48B4CA402495292C007B621E /* OrgDetailViewController.swift in Sources */,
 				FC380B5A2495689D00DE703D /* ActionPersistenceManager.swift in Sources */,
@@ -789,7 +797,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VRUAAAF4H3;
+				DEVELOPMENT_TEAM = KL58X3P954;
 				INFOPLIST_FILE = FullCircle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -808,7 +816,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VRUAAAF4H3;
+				DEVELOPMENT_TEAM = KL58X3P954;
 				INFOPLIST_FILE = FullCircle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

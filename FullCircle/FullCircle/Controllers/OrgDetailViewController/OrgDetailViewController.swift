@@ -61,53 +61,12 @@ extension OrgDetailViewController {
         let orgNameAndDescrip = OrgDetailCellInfo(title: organization.name, description: organization.description)
         let orgNameAndDescripCell = CellCoupler(OrgDetailCell.self, orgNameAndDescrip)
         couplers.append(orgNameAndDescripCell)
-        
-//        let orgAction = OrgDetailCellInfo(title: "Example")
-//        let orgActionCell = CellCoupler(OrgDetailCell.self, orgAction, didSelect: { [weak self] (_) in
-//            // TODO: Handle selection
-//        })
-//        couplers.append(orgActionCell)
-        
     
-        for action in organization.actions {
-            //Action
-            let actionListCell = tableView.dequeueReusableCell(withIdentifier: "actionListCell") as! ActionListTableViewCell
-            
-            actionListCell.actionNameLabel.text = action.name
-            actionListCell.orgNameLabel.text = action.organization.name
-            
-            //TODO: Update image based on action type
-            actionListCell.actionTypeImageView.image = UIImage(named: action.organization.logoString)!
-            
-            switch action.isSaved {
-            case true:
-                actionListCell.saveActionButton.setBackgroundImage(UIImage(systemName: "star.circle.fill"), for: .normal)
-            default:
-                actionListCell.saveActionButton.setBackgroundImage(UIImage(systemName: "star.circle"), for: .normal)
-            }
-            
-            actionListCell.saveAction = {
-                let index = allActions.firstIndex(where: { $0.name == action.name } )
-                allActions[index!].isSaved = allActions[index!].isSaved ? false : true
-                print("saved button pressed for \(allActions[index!].name). Currently saved: \(allActions[index!].isSaved)")
-                
-                //            do {
-                //                let savedActions = try ActionPersistenceManager.manager.getSavedActions()
-                //
-                //                if let index = savedActions.firstIndex(where: { $0.name == action.name }) {
-                //                    try ActionPersistenceManager.manager.deleteAction(actions: savedActions, at: index)
-                //                } else {
-                //                    try ActionPersistenceManager.manager.saveAction(action: action)
-                //                }
-                //            } catch {
-                //                print(error)
-                //            }
-            }
-            
-            //couplers.append(BaseCellCoupler(cellType: actionListCell))
-        }
         
-
+        //header
+        let orgAction = OrgDetailCellInfo(title: "Contact Us")
+        let orgActionCell = CellCoupler(OrgDetailCell.self, orgAction)
+        couplers.append(orgActionCell)
         
         //contact
         let orgCoordinates = getCoordinates(forAddress: organization.address)
@@ -120,7 +79,16 @@ extension OrgDetailViewController {
         let buttonActioncell = CellCoupler(OrgDetailButtonCell.self, donateToOrgInfo)
         couplers.append(buttonActioncell)
         
-        //sections.append(CellCouplerSection(couplers: couplers))
+        //header
+        let orgTileAction = OrgDetailCellInfo(title: "Avaliable Actions")
+        let orgTitleActionCell = CellCoupler(OrgDetailCell.self, orgTileAction)
+        couplers.append(orgTitleActionCell)
+        
+        for action in organization.actions {
+            let orgActionName = OrgActionListCellData(actionName: action.name)
+            let orgActionNameCell = CellCoupler(OrgActionListCell.self, orgActionName)
+            couplers.append(orgActionNameCell)
+        }
         
         tableSource?.set(couplers: couplers)
     }
