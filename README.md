@@ -1,5 +1,5 @@
 # FullCircle
-FullCircle is an iOS app that connects and builds relationships between grassroots orgs with individuals to build people power and move individuals along a scaffolded spectrum of civic engagement over time. Development of FullCircle kicked off as a part of (NYC Coder's Hackathon for Black Lives Matter (June 11 - June 14, 2020))[https://www.meetup.com/nyc-coders/events/271029282].
+FullCircle is an iOS app that connects and builds relationships between grassroots orgs with individuals to build people power and move individuals along a scaffolded spectrum of civic engagement over time. Development of FullCircle kicked off as a part of [NYC Coder's Hackathon for Black Lives Matter (June 11 - June 14, 2020)](https://www.meetup.com/nyc-coders/events/271029282).
 
 ## Current Features
 
