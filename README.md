@@ -17,10 +17,6 @@ A list of actions posted by organizations and details on selected actions.
 Ability to save actions.
 
 
-
-## Working Design
-[InvisionApp](https://projects.invisionapp.com/share/5RXOQDAZUB4#/screens/421496348) (Design and logos by [Abigail Kumar](kumario105@gmail.com))
-
 ## Future Features
 - Account creation and management through Google Firebase/Firebase Auth
 - Unique account experiences for individuals and organizations
