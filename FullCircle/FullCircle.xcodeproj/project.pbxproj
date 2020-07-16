@@ -309,10 +309,10 @@
 		EAE711762494623700418D64 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				48B331E42496813D007080C7 /* OrgDetailViewController */,
 				EAE7116B24945FAA00418D64 /* HomeTabBarController.swift */,
 				EA2B42BA2495B7C200136D4F /* ProfileViewController */,
 				EAE7118224953A4E00418D64 /* OrgListViewController */,
+				48B331E42496813D007080C7 /* OrgDetailViewController */,
 				EAE7118824955ED400418D64 /* ActionListViewController */,
 				EAE7117324945FF400418D64 /* ActionDetailViewController.swift */,
 				FC380B5B2496740D00DE703D /* ActionDetailViewController+Map.swift */,
