@@ -15,7 +15,7 @@ struct Organization: Codable {
     let address: String
     let phone: String
     let email: String
-    let website: String
+    let websiteURL: String
     let donateURL: String
     let logoString: String//Stored in assets folder
     let type: OrganizationType

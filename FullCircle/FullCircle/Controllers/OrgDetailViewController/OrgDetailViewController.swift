@@ -70,7 +70,7 @@ extension OrgDetailViewController {
         
         //contact
         let orgCoordinates = getCoordinates(forAddress: organization.address)
-        let orgContactInfo = OrgDetailContactCellData(phoneInfo: organization.phone, emailInfo: organization.email, linkInfo: organization.website, locationCoordinates: orgCoordinates)
+        let orgContactInfo = OrgDetailContactCellData(phoneInfo: organization.phone, emailInfo: organization.email, linkInfo: organization.websiteURL, locationCoordinates: orgCoordinates)
         let orgContactInfoCell = CellCoupler(OrgDetailContactCell.self, orgContactInfo)
         couplers.append(orgContactInfoCell)
         
