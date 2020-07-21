@@ -55,8 +55,8 @@ extension OrgDetailViewController {
         //Logo
         // TODO: update image from FB
 //        let orgLogo = OrgDetailImageCellData(image: organization.imageURL)
-        let orgLogoCell = CellCoupler(OrgDetailImageCell.self, orgLogo)
-        couplers.append(orgLogoCell)
+//        let orgLogoCell = CellCoupler(OrgDetailImageCell.self, orgLogo)
+//        couplers.append(orgLogoCell)
         
         //Name & Description
         let orgNameAndDescrip = OrgDetailCellInfo(title: organization.name, description: organization.description)

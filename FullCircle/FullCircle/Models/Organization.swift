@@ -18,7 +18,7 @@ struct Organization: Codable {
     let websiteURL: String
     let donateURL: String
     let imageURL: String
-    let type: OrganizationType
+    let organizationType: OrganizationType
     var actions: [Action]
     
 }

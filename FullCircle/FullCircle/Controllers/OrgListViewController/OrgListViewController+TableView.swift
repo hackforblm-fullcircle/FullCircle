@@ -19,7 +19,7 @@ extension OrgListViewController: UITableViewDataSource {
         
         cell.orgNameLabel.text = organization.name
         cell.orgDetailLabel.text = """
-        \(organization.type)
+        \(organization.organizationType)
         \(organization.address)
         """
         // TODO: update image from FB
