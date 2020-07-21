@@ -16,7 +16,7 @@ class Action: Codable {
     let engagementLevel: EngagementLevel
     let location: String
     let actionURL: String
-    let iconString: String //Stored in Assets folder, refactor to imageURL
+    let imageURL: String //Stored in Assets folder, refactor to imageURL
     var isSaved: Bool
     let actionCode: ActionCode
     
@@ -27,15 +27,15 @@ class Action: Codable {
      */
     
     
-    init(id: String ,name: String, description: String, organization: Organization, engagementLevel: EngagementLevel, location: String, actionURL: String, iconString: String, isSaved: Bool, actionCode: ActionCode) {
+    init(id: String ,name: String, description: String, organization: Organization, engagementLevel: EngagementLevel, location: String, imageURL: String, iconString: String, isSaved: Bool, actionCode: ActionCode) {
         self.id = "a-\(UUID().description)"
         self.name = name
         self.description = description
         self.organization = organization
         self.engagementLevel = engagementLevel
         self.location = location
-        self.actionURL = actionURL
-        self.iconString = iconString
+        self.actionURL = imageURL
+        self.imageURL = iconString
         self.isSaved = isSaved
         self.actionCode = actionCode
     }

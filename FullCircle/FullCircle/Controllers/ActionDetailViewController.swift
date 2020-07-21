@@ -39,7 +39,8 @@ class ActionDetailViewController: UIViewController {
     
     private lazy var activityTypeIconView: UIImageView = {
         let iconView = UIImageView()
-        iconView.image = UIImage(named: self.action.iconString)
+        // Refactor to load image from URL string
+//        iconView.image = UIImage(named: self.action.imageURL)
         return iconView
     }()
     
