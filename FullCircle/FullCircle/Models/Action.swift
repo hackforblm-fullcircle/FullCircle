@@ -14,13 +14,13 @@ struct Action: Codable {
     let description: String
     let organizationID: String
     let actionURL: String
-    let imageURL: String //Stored in Assets folder, refactor to imageURL
+    let imageURL: String
     let engagementLevel: EngagementLevel
     let actionType: ActionType
     //TODO: create actionMeta property
     
     init(id: String ,name: String, description: String, organizationID: String, imageURL: String, iconString: String, engagementLevel: EngagementLevel, actionType: ActionType) {
-        self.id = "a-\(UUID().description)"
+        self.id = "action-\(UUID().description)"
         self.name = name
         self.description = description
         self.organizationID = organizationID
