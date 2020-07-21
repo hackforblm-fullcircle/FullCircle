@@ -102,7 +102,7 @@ class ActionDetailViewController: UIViewController {
     
     @objc private func takeActionButtonPressed() {
         
-        switch action.actionCode {
+        switch action.actionType {
         case .protest:
             showMap()
         case .email:
