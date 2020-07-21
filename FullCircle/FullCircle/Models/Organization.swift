@@ -19,8 +19,21 @@ struct Organization: Codable {
     let donateURL: String
     let imageURL: String
     let organizationType: OrganizationType
-    var actions: [Action]
+    let actions: [Action]
     
+    init(id: String, name: String, description: String, address: String, phone: String, email: String, websiteURL: String, donateURL: String, imageURL: String, organizationType: OrganizationType, actions: [Action]) {
+        self.id = "organization-\(UUID().description)"
+        self.name = name
+        self.description = description
+        self.address = address
+        self.phone = phone
+        self.email = email
+        self.websiteURL = websiteURL
+        self.donateURL = donateURL
+        self.imageURL = imageURL
+        self.organizationType = organizationType
+        self.actions = actions
+    }
 }
 
 enum OrganizationType: String, Codable {
