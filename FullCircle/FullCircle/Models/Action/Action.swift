@@ -17,9 +17,9 @@ struct Action {
     let imageURL: String
     let engagementLevel: EngagementLevel
     let actionType: ActionType
-    //TODO: create actionMeta property
+    let actionMeta: [String : Any]
     
-    init(id: String ,name: String, description: String, organizationID: String, imageURL: String, iconString: String, engagementLevel: EngagementLevel, actionType: ActionType) {
+    init(id: String ,name: String, description: String, organizationID: String, imageURL: String, iconString: String, engagementLevel: EngagementLevel, actionType: ActionType, actionMeta: [String : Any]) {
         self.id = "action-\(UUID().description)"
         self.name = name
         self.description = description
@@ -28,6 +28,7 @@ struct Action {
         self.imageURL = iconString
         self.engagementLevel = engagementLevel
         self.actionType = actionType
+        self.actionMeta = actionMeta
     }
 }
 
