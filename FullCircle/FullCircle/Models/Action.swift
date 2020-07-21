@@ -13,37 +13,21 @@ struct Action: Codable {
     let name: String
     let description: String
     let organizationID: String
-    let engagementLevel: EngagementLevel
     let actionURL: String
     let imageURL: String //Stored in Assets folder, refactor to imageURL
+    let engagementLevel: EngagementLevel
     let actionType: ActionType
+    //TODO: create actionMeta property
     
-    init(id: String ,name: String, description: String, organizationID: String, engagementLevel: EngagementLevel, imageURL: String, iconString: String, actionType: ActionType) {
+    init(id: String ,name: String, description: String, organizationID: String, imageURL: String, iconString: String, engagementLevel: EngagementLevel, actionType: ActionType) {
         self.id = "a-\(UUID().description)"
         self.name = name
         self.description = description
         self.organizationID = organizationID
-        self.engagementLevel = engagementLevel
         self.actionURL = imageURL
         self.imageURL = iconString
+        self.engagementLevel = engagementLevel
         self.actionType = actionType
     }
 }
-
-enum EngagementLevel: String, Codable {
-    case easy
-    case medium
-    case hard
-}
-
-enum ActionType: String, Codable {
-    case email
-    case protest
-    case donate
-    case phone
-    case petition
-}
-
-//TODO: Remove global property once actions are pulled from FB
-var allActions = [Action]()
 
