@@ -16,16 +16,9 @@ struct Action: Codable {
     let engagementLevel: EngagementLevel
     let actionURL: String
     let imageURL: String //Stored in Assets folder, refactor to imageURL
-    let actionCode: ActionCode
+    let actionType: ActionType
     
-    /*
-     cause/issue tags
-     people saved
-     people taken
-     */
-    
-    
-    init(id: String ,name: String, description: String, organizationID: String, engagementLevel: EngagementLevel, imageURL: String, iconString: String, isSaved: Bool, actionCode: ActionCode) {
+    init(id: String ,name: String, description: String, organizationID: String, engagementLevel: EngagementLevel, imageURL: String, iconString: String, actionType: ActionType) {
         self.id = "a-\(UUID().description)"
         self.name = name
         self.description = description
@@ -33,7 +26,7 @@ struct Action: Codable {
         self.engagementLevel = engagementLevel
         self.actionURL = imageURL
         self.imageURL = iconString
-        self.actionCode = actionCode
+        self.actionType = actionType
     }
 }
 
@@ -43,7 +36,7 @@ enum EngagementLevel: String, Codable {
     case hard
 }
 
-enum ActionCode: String, Codable {
+enum ActionType: String, Codable {
     case email
     case protest
     case donate
