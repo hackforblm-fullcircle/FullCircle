@@ -9,6 +9,7 @@
 import Foundation
 
 struct Organization: Codable {
+    let id: String
     let name: String
     let description: String
     let address: String
