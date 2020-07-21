@@ -34,10 +34,11 @@ extension ProfileViewController: UITableViewDataSource {
             let action = savedActions[indexPath.row]
             
             cell.actionNameLabel.text = action.name
-            cell.orgNameLabel.text = action.organization.name
-            //TODO: Update image based on action type
-            cell.actionTypeImageView.image = UIImage(named: action.organization.logoString)!
             
+            // TODO: Refactor to obtain org info from Firebase
+//            cell.orgNameLabel.text = action.organizationID.name
+//            cell.actionTypeImageView.image = UIImage(named: action.organizationID.logoString)!
+//
             switch action.isSaved {
             case true:
                 cell.saveActionButton.setBackgroundImage(UIImage(systemName: "star.circle.fill"), for: .normal)

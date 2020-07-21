@@ -25,7 +25,8 @@ class ActionDetailViewController: UIViewController {
     
     private lazy var orgLogoView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: self.action.organization.logoString)
+        // TODO: Refactor to obtain org info from Firebase
+//        imageView.image = UIImage(named: self.action.organizationID.logoString)
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
@@ -33,7 +34,8 @@ class ActionDetailViewController: UIViewController {
     private lazy var orgNameLabel: FCHeaderLabel = {
         let label = FCHeaderLabel()
         label.textAlignment = .center
-        label.text = action.organization.name
+        // TODO: Refactor to obtain org info from Firebase
+//        label.text = action.organizationID.name
         return label
     }()
     

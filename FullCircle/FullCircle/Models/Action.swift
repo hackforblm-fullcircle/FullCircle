@@ -12,7 +12,7 @@ class Action: Codable {
     let id: String
     let name: String
     let description: String
-    let organization: Organization
+    let organizationID: String
     let engagementLevel: EngagementLevel
     let location: String
     let actionURL: String
@@ -27,11 +27,11 @@ class Action: Codable {
      */
     
     
-    init(id: String ,name: String, description: String, organization: Organization, engagementLevel: EngagementLevel, location: String, imageURL: String, iconString: String, isSaved: Bool, actionCode: ActionCode) {
+    init(id: String ,name: String, description: String, organizationID: String, engagementLevel: EngagementLevel, location: String, imageURL: String, iconString: String, isSaved: Bool, actionCode: ActionCode) {
         self.id = "a-\(UUID().description)"
         self.name = name
         self.description = description
-        self.organization = organization
+        self.organizationID = organizationID
         self.engagementLevel = engagementLevel
         self.location = location
         self.actionURL = imageURL
