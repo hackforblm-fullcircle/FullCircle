@@ -20,7 +20,7 @@ extension OrgListViewController: UITableViewDataSource {
         cell.orgNameLabel.text = organization.name
         cell.orgDetailLabel.text = """
         \(organization.type)
-        \(organization.borough.rawValue), NY
+        \(organization.address)
         """
         cell.orgLogoImageView.image = UIImage(named: organization.logoString)
         

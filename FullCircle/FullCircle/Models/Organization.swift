@@ -13,7 +13,6 @@ struct Organization: Codable {
     let name: String
     let description: String
     let address: String
-    let borough: Borough
     let phone: String
     let email: String
     let website: String
@@ -31,13 +30,4 @@ enum OrganizationType: String, Codable {
     case lobby
     case academic
     case individual
-}
-
-enum Borough: String, Codable {
-    case manhattan = "Manhattan"
-    case brooklyn = "Brooklyn"
-    case queens = "Queens"
-    case bronx = "The Bronx"
-    case statenIsland = "Staten Island"
-    case multiple = "Multiple"
 }
