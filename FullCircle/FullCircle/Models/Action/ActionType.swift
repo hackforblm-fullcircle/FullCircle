@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum ActionType: String, Codable {
+enum ActionType: String {
     case email
     case protest
     case donate

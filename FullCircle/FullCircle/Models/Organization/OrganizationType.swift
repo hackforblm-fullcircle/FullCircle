@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum OrganizationType: String, Codable {
+enum OrganizationType: String {
     case movement
     case nonprofit
     case forProfit

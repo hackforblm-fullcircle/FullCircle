@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum EngagementLevel: String, Codable {
+enum EngagementLevel: String {
     case easy
     case medium
     case hard
