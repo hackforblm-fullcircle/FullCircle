@@ -17,7 +17,7 @@ class Action: Codable {
     let location: String
     let actionURL: String
     let imageURL: String //Stored in Assets folder, refactor to imageURL
-    var isSaved: Bool
+//    var isSaved: Bool
     let actionCode: ActionCode
     
     /*
@@ -36,7 +36,7 @@ class Action: Codable {
         self.location = location
         self.actionURL = imageURL
         self.imageURL = iconString
-        self.isSaved = isSaved
+//        self.isSaved = isSaved
         self.actionCode = actionCode
     }
 }

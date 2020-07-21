@@ -37,11 +37,15 @@ class ProfileViewController: UIViewController {
     }()
     
     //MARK: - Internal Properties
-    var savedActions = allActions.filter { $0.isSaved == true } {
-        didSet {
-            actionListTableView.reloadData()
-        }
-    }
+    
+    var savedActions = [Action]()
+    
+    //TODO: Load saved actions from user data in FB
+//    var savedActions = allActions.filter { $0.isSaved == true } {
+//        didSet {
+//            actionListTableView.reloadData()
+//        }
+//    }
     
     //MARK: - Lifecycle Methods
     override func viewDidLoad() {
@@ -63,7 +67,8 @@ class ProfileViewController: UIViewController {
     }
     
     func updateUserInfoLabel() {
-        savedActions = allActions.filter { $0.isSaved == true }
+        //TODO: Load saved actions from user data in FB
+//        savedActions = allActions.filter { $0.isSaved == true }
         userInfoLabel.text = """
         \(savedActions.count) saved actions
         0 actions taken
