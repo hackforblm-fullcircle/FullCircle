@@ -259,6 +259,16 @@
 			path = Labels;
 			sourceTree = "<group>";
 		};
+		EA91019824C783A400CE7FC7 /* Action */ = {
+			isa = PBXGroup;
+			children = (
+				EAE7117B249463CA00418D64 /* Action.swift */,
+				EA91019424C77D9600CE7FC7 /* EngagementLevel.swift */,
+				EA91019624C77DA800CE7FC7 /* ActionType.swift */,
+			);
+			path = Action;
+			sourceTree = "<group>";
+		};
 		EAE7113D2494487A00418D64 = {
 			isa = PBXGroup;
 			children = (
@@ -342,9 +352,7 @@
 			isa = PBXGroup;
 			children = (
 				EAE71179249463B400418D64 /* Organization.swift */,
-				EAE7117B249463CA00418D64 /* Action.swift */,
-				EA91019424C77D9600CE7FC7 /* EngagementLevel.swift */,
-				EA91019624C77DA800CE7FC7 /* ActionType.swift */,
+				EA91019824C783A400CE7FC7 /* Action */,
 			);
 			path = Models;
 			sourceTree = "<group>";
