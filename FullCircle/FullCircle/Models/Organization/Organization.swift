@@ -35,12 +35,3 @@ struct Organization: Codable {
         self.actions = actions
     }
 }
-
-enum OrganizationType: String, Codable {
-    case movement
-    case nonprofit
-    case forProfit
-    case lobby
-    case academic
-    case individual
-}

@@ -48,6 +48,7 @@
 		EA91019324C76F2200CE7FC7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA91019224C76F2100CE7FC7 /* GoogleService-Info.plist */; };
 		EA91019524C77D9600CE7FC7 /* EngagementLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA91019424C77D9600CE7FC7 /* EngagementLevel.swift */; };
 		EA91019724C77DA800CE7FC7 /* ActionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA91019624C77DA800CE7FC7 /* ActionType.swift */; };
+		EA91019B24C78EE600CE7FC7 /* OrganizationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA91019A24C78EE600CE7FC7 /* OrganizationType.swift */; };
 		EAE7114A2494487A00418D64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE711492494487A00418D64 /* AppDelegate.swift */; };
 		EAE7114C2494487A00418D64 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE7114B2494487A00418D64 /* SceneDelegate.swift */; };
 		EAE711512494487A00418D64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAE7114F2494487A00418D64 /* Main.storyboard */; };
@@ -123,6 +124,7 @@
 		EA91019224C76F2100CE7FC7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EA91019424C77D9600CE7FC7 /* EngagementLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngagementLevel.swift; sourceTree = "<group>"; };
 		EA91019624C77DA800CE7FC7 /* ActionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionType.swift; sourceTree = "<group>"; };
+		EA91019A24C78EE600CE7FC7 /* OrganizationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationType.swift; sourceTree = "<group>"; };
 		EAE711462494487A00418D64 /* FullCircle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FullCircle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAE711492494487A00418D64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EAE7114B2494487A00418D64 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -269,6 +271,15 @@
 			path = Action;
 			sourceTree = "<group>";
 		};
+		EA91019924C78EB000CE7FC7 /* Organization */ = {
+			isa = PBXGroup;
+			children = (
+				EAE71179249463B400418D64 /* Organization.swift */,
+				EA91019A24C78EE600CE7FC7 /* OrganizationType.swift */,
+			);
+			path = Organization;
+			sourceTree = "<group>";
+		};
 		EAE7113D2494487A00418D64 = {
 			isa = PBXGroup;
 			children = (
@@ -351,7 +362,7 @@
 		EAE71178249463A500418D64 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				EAE71179249463B400418D64 /* Organization.swift */,
+				EA91019924C78EB000CE7FC7 /* Organization */,
 				EA91019824C783A400CE7FC7 /* Action */,
 			);
 			path = Models;
@@ -645,6 +656,7 @@
 				EAE7117A249463B400418D64 /* Organization.swift in Sources */,
 				EAE7118724953F1700418D64 /* OrgListTableViewCell+Constraints.swift in Sources */,
 				EAE7116C24945FAA00418D64 /* HomeTabBarController.swift in Sources */,
+				EA91019B24C78EE600CE7FC7 /* OrganizationType.swift in Sources */,
 				EAE7114C2494487A00418D64 /* SceneDelegate.swift in Sources */,
 				48B4CA3F2495292C007B621E /* OrgDetailCell.swift in Sources */,
 				EAE7117424945FF400418D64 /* ActionDetailViewController.swift in Sources */,
