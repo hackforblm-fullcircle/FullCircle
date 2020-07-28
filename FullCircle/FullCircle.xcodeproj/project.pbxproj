@@ -25,6 +25,10 @@
 		48B4CA402495292C007B621E /* OrgDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B4CA3B2495292C007B621E /* OrgDetailViewController.swift */; };
 		6299F0BBDC150CDCC15D9E06 /* Pods_FullCircle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 911D212296111CB0683AD60E /* Pods_FullCircle.framework */; };
 		8642757812D7CA487627A848 /* Pods_FullCircleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58F2F8A4052B182DFF03AE11 /* Pods_FullCircleTests.framework */; };
+		EA241A8D24D0847E00A8CBC8 /* AppUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA241A8C24D0847E00A8CBC8 /* AppUser.swift */; };
+		EA241A8F24D08A6B00A8CBC8 /* UserAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA241A8E24D08A6B00A8CBC8 /* UserAction.swift */; };
+		EA241A9124D08B2C00A8CBC8 /* Cause.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA241A9024D08B2C00A8CBC8 /* Cause.swift */; };
+		EA241A9324D08C4200A8CBC8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA241A9224D08C4200A8CBC8 /* GoogleService-Info.plist */; };
 		EA2B42BC2495B7DB00136D4F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2B42BB2495B7DB00136D4F /* ProfileViewController.swift */; };
 		EA2B42BE2495B98800136D4F /* ProfileViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2B42BD2495B98800136D4F /* ProfileViewController+TableView.swift */; };
 		EA2B42C02495BD7A00136D4F /* ProfileViewController+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2B42BF2495BD7A00136D4F /* ProfileViewController+Constraints.swift */; };
@@ -107,6 +111,10 @@
 		911D212296111CB0683AD60E /* Pods_FullCircle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FullCircle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF64500D599452C845188048 /* Pods-FullCircleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FullCircleTests.release.xcconfig"; path = "Target Support Files/Pods-FullCircleTests/Pods-FullCircleTests.release.xcconfig"; sourceTree = "<group>"; };
 		CCE30EF293F3F7F561CD27A0 /* Pods-FullCircleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FullCircleTests.debug.xcconfig"; path = "Target Support Files/Pods-FullCircleTests/Pods-FullCircleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		EA241A8C24D0847E00A8CBC8 /* AppUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUser.swift; sourceTree = "<group>"; };
+		EA241A8E24D08A6B00A8CBC8 /* UserAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAction.swift; sourceTree = "<group>"; };
+		EA241A9024D08B2C00A8CBC8 /* Cause.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cause.swift; sourceTree = "<group>"; };
+		EA241A9224D08C4200A8CBC8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EA2B42BB2495B7DB00136D4F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		EA2B42BD2495B98800136D4F /* ProfileViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileViewController+TableView.swift"; sourceTree = "<group>"; };
 		EA2B42BF2495BD7A00136D4F /* ProfileViewController+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileViewController+Constraints.swift"; sourceTree = "<group>"; };
@@ -362,6 +370,9 @@
 			children = (
 				EA91019924C78EB000CE7FC7 /* Organization */,
 				EA91019824C783A400CE7FC7 /* Action */,
+				EA241A8C24D0847E00A8CBC8 /* AppUser.swift */,
+				EA241A8E24D08A6B00A8CBC8 /* UserAction.swift */,
+				EA241A9024D08B2C00A8CBC8 /* Cause.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -622,6 +633,7 @@
 				EAE7118A249562AA00418D64 /* ActionListViewController+Constraints.swift in Sources */,
 				EAE7117224945FEB00418D64 /* ActionListViewController.swift in Sources */,
 				EAE7118C24956EAB00418D64 /* ActionListViewController+TableView.swift in Sources */,
+				EA241A9124D08B2C00A8CBC8 /* Cause.swift in Sources */,
 				EA2B42D82496818400136D4F /* FCCaptionLabel.swift in Sources */,
 				EA2B42CF24967AD100136D4F /* FCHeaderLabel.swift in Sources */,
 				EA2B42D52496814700136D4F /* FCBodyLabel.swift in Sources */,
@@ -646,6 +658,7 @@
 				EA2B42C42496764700136D4F /* FCDesign.swift in Sources */,
 				EAE7114A2494487A00418D64 /* AppDelegate.swift in Sources */,
 				FC380B58249566F300DE703D /* PersistenceHelper.swift in Sources */,
+				EA241A8D24D0847E00A8CBC8 /* AppUser.swift in Sources */,
 				48A8295E2496A80D008D9359 /* OrgDetailImageCell.swift in Sources */,
 				EAE7118424953A7D00418D64 /* OrgListTableViewCell.swift in Sources */,
 				EA2B42E12496A00E00136D4F /* FCSearchBar.swift in Sources */,
@@ -656,6 +669,7 @@
 				EAE7114C2494487A00418D64 /* SceneDelegate.swift in Sources */,
 				48B4CA3F2495292C007B621E /* OrgDetailCell.swift in Sources */,
 				EAE7117424945FF400418D64 /* ActionDetailViewController.swift in Sources */,
+				EA241A8F24D08A6B00A8CBC8 /* UserAction.swift in Sources */,
 				EAE7116E24945FCD00418D64 /* OrgListViewController.swift in Sources */,
 				EAE711812495362300418D64 /* OrgListViewController+Constraints.swift in Sources */,
 				48B331DE24967DF5007080C7 /* OrgDetailButtonCell.swift in Sources */,
