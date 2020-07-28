@@ -71,7 +71,6 @@
 		EAE711922495707700418D64 /* ActionListTableViewCell+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE711912495707700418D64 /* ActionListTableViewCell+Constraints.swift */; };
 		EAE711942495759300418D64 /* ActionListViewController+Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE711932495759300418D64 /* ActionListViewController+Buttons.swift */; };
 		FC380B58249566F300DE703D /* PersistenceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC380B57249566F300DE703D /* PersistenceHelper.swift */; };
-		FC380B5A2495689D00DE703D /* ActionPersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC380B592495689D00DE703D /* ActionPersistenceManager.swift */; };
 		FC380B5C2496740D00DE703D /* ActionDetailViewController+Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC380B5B2496740D00DE703D /* ActionDetailViewController+Map.swift */; };
 /* End PBXBuildFile section */
 
@@ -151,7 +150,6 @@
 		EAE711912495707700418D64 /* ActionListTableViewCell+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ActionListTableViewCell+Constraints.swift"; path = "FullCircle/Views/TableViewCells/ActionListTableViewCell+Constraints.swift"; sourceTree = SOURCE_ROOT; };
 		EAE711932495759300418D64 /* ActionListViewController+Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ActionListViewController+Buttons.swift"; path = "FullCircle/Views/TableViewCells/ActionListViewController+Buttons.swift"; sourceTree = SOURCE_ROOT; };
 		FC380B57249566F300DE703D /* PersistenceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceHelper.swift; sourceTree = "<group>"; };
-		FC380B592495689D00DE703D /* ActionPersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionPersistenceManager.swift; sourceTree = "<group>"; };
 		FC380B5B2496740D00DE703D /* ActionDetailViewController+Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActionDetailViewController+Map.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -435,7 +433,6 @@
 			isa = PBXGroup;
 			children = (
 				FC380B57249566F300DE703D /* PersistenceHelper.swift */,
-				FC380B592495689D00DE703D /* ActionPersistenceManager.swift */,
 			);
 			path = Persistence;
 			sourceTree = "<group>";
@@ -645,7 +642,6 @@
 				48A829622496BA1B008D9359 /* OrgActionListCell.swift in Sources */,
 				EA2B42D224967D5A00136D4F /* FCSubHeaderLabel.swift in Sources */,
 				48B4CA402495292C007B621E /* OrgDetailViewController.swift in Sources */,
-				FC380B5A2495689D00DE703D /* ActionPersistenceManager.swift in Sources */,
 				48B331D724953254007080C7 /* BaseTableViewCell.swift in Sources */,
 				EA2B42C42496764700136D4F /* FCDesign.swift in Sources */,
 				EAE7114A2494487A00418D64 /* AppDelegate.swift in Sources */,
