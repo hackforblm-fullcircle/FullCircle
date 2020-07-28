@@ -8,6 +8,6 @@
 
 import Foundation
 
-enum Causes: String {
+enum Cause: String {
     case race = "Race"
 }
