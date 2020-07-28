@@ -19,10 +19,11 @@ extension OrgListViewController: UITableViewDataSource {
         
         cell.orgNameLabel.text = organization.name
         cell.orgDetailLabel.text = """
-        \(organization.type)
-        \(organization.borough.rawValue), NY
+        \(organization.organizationType)
+        \(organization.address)
         """
-        cell.orgLogoImageView.image = UIImage(named: organization.logoString)
+        // TODO: update image from FB
+//        cell.orgLogoImageView.image = UIImage(named: organization.imageURL)
         
         return cell
     }

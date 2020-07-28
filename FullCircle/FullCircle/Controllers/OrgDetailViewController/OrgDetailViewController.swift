@@ -53,9 +53,10 @@ extension OrgDetailViewController {
         var couplers = [BaseCellCoupler]()
         
         //Logo
-        let orgLogo = OrgDetailImageCellData(image: organization.logoString)
-        let orgLogoCell = CellCoupler(OrgDetailImageCell.self, orgLogo)
-        couplers.append(orgLogoCell)
+        // TODO: update image from FB
+//        let orgLogo = OrgDetailImageCellData(image: organization.imageURL)
+//        let orgLogoCell = CellCoupler(OrgDetailImageCell.self, orgLogo)
+//        couplers.append(orgLogoCell)
         
         //Name & Description
         let orgNameAndDescrip = OrgDetailCellInfo(title: organization.name, description: organization.description)
@@ -70,7 +71,7 @@ extension OrgDetailViewController {
         
         //contact
         let orgCoordinates = getCoordinates(forAddress: organization.address)
-        let orgContactInfo = OrgDetailContactCellData(phoneInfo: organization.phone, emailInfo: organization.email, linkInfo: organization.website, locationCoordinates: orgCoordinates)
+        let orgContactInfo = OrgDetailContactCellData(phoneInfo: organization.phone, emailInfo: organization.email, linkInfo: organization.websiteURL, locationCoordinates: orgCoordinates)
         let orgContactInfoCell = CellCoupler(OrgDetailContactCell.self, orgContactInfo)
         couplers.append(orgContactInfoCell)
         

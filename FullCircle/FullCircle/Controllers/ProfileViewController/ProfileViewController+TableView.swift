@@ -34,26 +34,29 @@ extension ProfileViewController: UITableViewDataSource {
             let action = savedActions[indexPath.row]
             
             cell.actionNameLabel.text = action.name
-            cell.orgNameLabel.text = action.organization.name
-            //TODO: Update image based on action type
-            cell.actionTypeImageView.image = UIImage(named: action.organization.logoString)!
             
-            switch action.isSaved {
-            case true:
-                cell.saveActionButton.setBackgroundImage(UIImage(systemName: "star.circle.fill"), for: .normal)
-                cell.saveActionButton.tintColor = FCDesign.red
-            default:
-                cell.saveActionButton.setBackgroundImage(UIImage(systemName: "star.circle"), for: .normal)
-                cell.saveActionButton.tintColor = FCDesign.darkGrey
-            }
+            // TODO: Refactor to obtain org info from Firebase
+//            cell.orgNameLabel.text = action.organizationID.name
+//            cell.actionTypeImageView.image = UIImage(named: action.organizationID.logoString)!
+
             
-            cell.saveAction = {
-                let index = allActions.firstIndex(where: { $0.name == action.name } )
-                allActions[index!].isSaved = allActions[index!].isSaved ? false : true
-                print("saved button pressed for \(allActions[index!].name). Currently saved: \(allActions[index!].isSaved)")
-                self.updateUserInfoLabel()
-            }
             
+            //TODO: Load saved actions from user data in FB
+//            switch action.isSaved {
+//            case true:
+//                cell.saveActionButton.setBackgroundImage(UIImage(systemName: "star.circle.fill"), for: .normal)
+//                cell.saveActionButton.tintColor = FCDesign.red
+//            default:
+//                cell.saveActionButton.setBackgroundImage(UIImage(systemName: "star.circle"), for: .normal)
+//                cell.saveActionButton.tintColor = FCDesign.darkGrey
+//            }
+//
+//            cell.saveAction = {
+//                let index = allActions.firstIndex(where: { $0.name == action.name } )
+//                allActions[index!].isSaved = allActions[index!].isSaved ? false : true
+//                print("saved button pressed for \(allActions[index!].name). Currently saved: \(allActions[index!].isSaved)")
+//                self.updateUserInfoLabel()
+//            }
         }
         
         return cell

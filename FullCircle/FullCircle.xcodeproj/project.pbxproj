@@ -45,6 +45,10 @@
 		EA2B42DC249689BD00136D4F /* FCCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2B42DA249689BD00136D4F /* FCCellView.swift */; };
 		EA2B42DF24969A8000136D4F /* FCNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2B42DE24969A8000136D4F /* FCNavigationController.swift */; };
 		EA2B42E12496A00E00136D4F /* FCSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2B42E02496A00E00136D4F /* FCSearchBar.swift */; };
+		EA91019324C76F2200CE7FC7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA91019224C76F2100CE7FC7 /* GoogleService-Info.plist */; };
+		EA91019524C77D9600CE7FC7 /* EngagementLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA91019424C77D9600CE7FC7 /* EngagementLevel.swift */; };
+		EA91019724C77DA800CE7FC7 /* ActionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA91019624C77DA800CE7FC7 /* ActionType.swift */; };
+		EA91019B24C78EE600CE7FC7 /* OrganizationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA91019A24C78EE600CE7FC7 /* OrganizationType.swift */; };
 		EAE7114A2494487A00418D64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE711492494487A00418D64 /* AppDelegate.swift */; };
 		EAE7114C2494487A00418D64 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE7114B2494487A00418D64 /* SceneDelegate.swift */; };
 		EAE711512494487A00418D64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAE7114F2494487A00418D64 /* Main.storyboard */; };
@@ -67,7 +71,6 @@
 		EAE711922495707700418D64 /* ActionListTableViewCell+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE711912495707700418D64 /* ActionListTableViewCell+Constraints.swift */; };
 		EAE711942495759300418D64 /* ActionListViewController+Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE711932495759300418D64 /* ActionListViewController+Buttons.swift */; };
 		FC380B58249566F300DE703D /* PersistenceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC380B57249566F300DE703D /* PersistenceHelper.swift */; };
-		FC380B5A2495689D00DE703D /* ActionPersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC380B592495689D00DE703D /* ActionPersistenceManager.swift */; };
 		FC380B5C2496740D00DE703D /* ActionDetailViewController+Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC380B5B2496740D00DE703D /* ActionDetailViewController+Map.swift */; };
 /* End PBXBuildFile section */
 
@@ -117,6 +120,10 @@
 		EA2B42DA249689BD00136D4F /* FCCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCCellView.swift; sourceTree = "<group>"; };
 		EA2B42DE24969A8000136D4F /* FCNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCNavigationController.swift; sourceTree = "<group>"; };
 		EA2B42E02496A00E00136D4F /* FCSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCSearchBar.swift; sourceTree = "<group>"; };
+		EA91019224C76F2100CE7FC7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EA91019424C77D9600CE7FC7 /* EngagementLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngagementLevel.swift; sourceTree = "<group>"; };
+		EA91019624C77DA800CE7FC7 /* ActionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionType.swift; sourceTree = "<group>"; };
+		EA91019A24C78EE600CE7FC7 /* OrganizationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationType.swift; sourceTree = "<group>"; };
 		EAE711462494487A00418D64 /* FullCircle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FullCircle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAE711492494487A00418D64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EAE7114B2494487A00418D64 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -143,7 +150,6 @@
 		EAE711912495707700418D64 /* ActionListTableViewCell+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ActionListTableViewCell+Constraints.swift"; path = "FullCircle/Views/TableViewCells/ActionListTableViewCell+Constraints.swift"; sourceTree = SOURCE_ROOT; };
 		EAE711932495759300418D64 /* ActionListViewController+Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ActionListViewController+Buttons.swift"; path = "FullCircle/Views/TableViewCells/ActionListViewController+Buttons.swift"; sourceTree = SOURCE_ROOT; };
 		FC380B57249566F300DE703D /* PersistenceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceHelper.swift; sourceTree = "<group>"; };
-		FC380B592495689D00DE703D /* ActionPersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionPersistenceManager.swift; sourceTree = "<group>"; };
 		FC380B5B2496740D00DE703D /* ActionDetailViewController+Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActionDetailViewController+Map.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -253,6 +259,25 @@
 			path = Labels;
 			sourceTree = "<group>";
 		};
+		EA91019824C783A400CE7FC7 /* Action */ = {
+			isa = PBXGroup;
+			children = (
+				EAE7117B249463CA00418D64 /* Action.swift */,
+				EA91019424C77D9600CE7FC7 /* EngagementLevel.swift */,
+				EA91019624C77DA800CE7FC7 /* ActionType.swift */,
+			);
+			path = Action;
+			sourceTree = "<group>";
+		};
+		EA91019924C78EB000CE7FC7 /* Organization */ = {
+			isa = PBXGroup;
+			children = (
+				EAE71179249463B400418D64 /* Organization.swift */,
+				EA91019A24C78EE600CE7FC7 /* OrganizationType.swift */,
+			);
+			path = Organization;
+			sourceTree = "<group>";
+		};
 		EAE7113D2494487A00418D64 = {
 			isa = PBXGroup;
 			children = (
@@ -283,6 +308,7 @@
 				FC380B56249566CC00DE703D /* Persistence */,
 				EAE711772494626E00418D64 /* Supporting Files */,
 				EAE711572494487D00418D64 /* Info.plist */,
+				EA91019224C76F2100CE7FC7 /* GoogleService-Info.plist */,
 			);
 			path = FullCircle;
 			sourceTree = "<group>";
@@ -309,10 +335,10 @@
 		EAE711762494623700418D64 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				48B331E42496813D007080C7 /* OrgDetailViewController */,
 				EAE7116B24945FAA00418D64 /* HomeTabBarController.swift */,
 				EA2B42BA2495B7C200136D4F /* ProfileViewController */,
 				EAE7118224953A4E00418D64 /* OrgListViewController */,
+				48B331E42496813D007080C7 /* OrgDetailViewController */,
 				EAE7118824955ED400418D64 /* ActionListViewController */,
 				EAE7117324945FF400418D64 /* ActionDetailViewController.swift */,
 				FC380B5B2496740D00DE703D /* ActionDetailViewController+Map.swift */,
@@ -334,8 +360,8 @@
 		EAE71178249463A500418D64 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				EAE71179249463B400418D64 /* Organization.swift */,
-				EAE7117B249463CA00418D64 /* Action.swift */,
+				EA91019924C78EB000CE7FC7 /* Organization */,
+				EA91019824C783A400CE7FC7 /* Action */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -407,7 +433,6 @@
 			isa = PBXGroup;
 			children = (
 				FC380B57249566F300DE703D /* PersistenceHelper.swift */,
-				FC380B592495689D00DE703D /* ActionPersistenceManager.swift */,
 			);
 			path = Persistence;
 			sourceTree = "<group>";
@@ -496,6 +521,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA91019324C76F2200CE7FC7 /* GoogleService-Info.plist in Resources */,
 				48A8295F2496A80D008D9359 /* OrgDetailImageCell.xib in Resources */,
 				48B331E324967FF0007080C7 /* OrgDetailContactCell.xib in Resources */,
 				48B331DF24967DF5007080C7 /* OrgDetailButtonCell.xib in Resources */,
@@ -604,7 +630,9 @@
 				48B331DA24967DC6007080C7 /* OrgDetailActionListCell.swift in Sources */,
 				EAE711922495707700418D64 /* ActionListTableViewCell+Constraints.swift in Sources */,
 				EA2B42BC2495B7DB00136D4F /* ProfileViewController.swift in Sources */,
+				EA91019724C77DA800CE7FC7 /* ActionType.swift in Sources */,
 				EAE7117F249535BD00418D64 /* OrgListViewController+TableView.swift in Sources */,
+				EA91019524C77D9600CE7FC7 /* EngagementLevel.swift in Sources */,
 				48B331D524953095007080C7 /* TableSource.swift in Sources */,
 				FC380B5C2496740D00DE703D /* ActionDetailViewController+Map.swift in Sources */,
 				EAE7117C249463CA00418D64 /* Action.swift in Sources */,
@@ -614,7 +642,6 @@
 				48A829622496BA1B008D9359 /* OrgActionListCell.swift in Sources */,
 				EA2B42D224967D5A00136D4F /* FCSubHeaderLabel.swift in Sources */,
 				48B4CA402495292C007B621E /* OrgDetailViewController.swift in Sources */,
-				FC380B5A2495689D00DE703D /* ActionPersistenceManager.swift in Sources */,
 				48B331D724953254007080C7 /* BaseTableViewCell.swift in Sources */,
 				EA2B42C42496764700136D4F /* FCDesign.swift in Sources */,
 				EAE7114A2494487A00418D64 /* AppDelegate.swift in Sources */,
@@ -625,6 +652,7 @@
 				EAE7117A249463B400418D64 /* Organization.swift in Sources */,
 				EAE7118724953F1700418D64 /* OrgListTableViewCell+Constraints.swift in Sources */,
 				EAE7116C24945FAA00418D64 /* HomeTabBarController.swift in Sources */,
+				EA91019B24C78EE600CE7FC7 /* OrganizationType.swift in Sources */,
 				EAE7114C2494487A00418D64 /* SceneDelegate.swift in Sources */,
 				48B4CA3F2495292C007B621E /* OrgDetailCell.swift in Sources */,
 				EAE7117424945FF400418D64 /* ActionDetailViewController.swift in Sources */,
