@@ -45,12 +45,12 @@ class FirestoreService {
             if let error = error {
                 completion(.failure(error))
             } else {
-                let organizations = snapshot?.documents.compactMap({ (snapshot) -> Action? in
+                let actions = snapshot?.documents.compactMap({ (snapshot) -> Action? in
                     let actionID = snapshot.documentID
-                    let org = Action(from: snapshot.data(), id: actionID)
-                    return org
+                    let action = Action(from: snapshot.data(), id: actionID)
+                    return action
                 })
-                completion(.success(organizations ?? []))
+                completion(.success(actions ?? []))
             }
         }
     }
