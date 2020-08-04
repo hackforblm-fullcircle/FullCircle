@@ -11,26 +11,39 @@ import UIKit
 class OrgDetailViewController: UIViewController {
     
     //MARK: - UI Objects
-    var orgImageView = UIImage()
+    var orgImageView: UIImageView = {
+        let imageView = UIImageView()
+        //For testing:
+        imageView.image = UIImage(named: "BlackLivesMatterLogo")
+        return imageView
+    }()
     
     var orgNameLabel = UILabel()
     
     var orgDescriptionTextView = UITextView()
     
-    var contactUsLabel = UILabel()
+    var contactUsLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Contact Us"
+        return label
+    }()
     
     var callButton = UIButton()
-    
     var emailButton = UIButton()
-    
     var websiteButton = UIButton()
-    
+    var donateButton = UIButton()
     var messageButton = UIButton()
     
-    var donateButton = UIButton()
+    //TODO: Add buttons to stackview
+    var buttonStackView = UIStackView()
     
-    var actionsLabel = UILabel()
+    var actionsLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Actions"
+        return label
+    }()
     
+    //TODO: Set up tableview
     var orgActionsTableView = UITableView()
     
     //MARK: - Internal Properties
