@@ -31,7 +31,8 @@ struct Organization {
             let websiteURL = dict["website"] as? String,
             let donateURL = dict["donateURL"] as? String,
             let logoImageURL = dict["logoString"] as? String,
-            let organizationType = dict["type"] as? OrganizationType
+            let type = dict["type"] as? String,
+            let organizationType = OrganizationType(rawValue: type)
             else { return nil }
         self.id = id
         self.name = name
