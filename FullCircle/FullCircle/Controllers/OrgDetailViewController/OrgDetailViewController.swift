@@ -56,5 +56,12 @@ class OrgDetailViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    private func populateOrgInfo(organization: Organization) {
+        //TODO: assign orgImageView image with image retrieved from organization.imageURL
+        orgNameLabel.text = organization.name
+        orgDescriptionTextView.text = organization.description
+        
+    }
+    
+    //TODO: Assign functionality to buttons
 }
