@@ -25,8 +25,10 @@ struct Action {
             let organizationID = dict["organizationID"] as? String,
             let imageURL = dict["imageURL"] as? String,
             let actionURL = dict["actionURL"] as? String,
-            let engagementLevel = dict["engagementLevel"] as? EngagementLevel,
-            let actionType = dict["actionType"] as? ActionType,
+            let level = dict["engagementLevel"] as? String,
+            let engagementLevel =  EngagementLevel(rawValue: level),
+            let type = dict["actionType"] as? String,
+            let actionType = ActionType(rawValue: type),
             let actionMeta = dict["actionMeta"] as? [String : Any] else { return nil }
         
         self.id = id
