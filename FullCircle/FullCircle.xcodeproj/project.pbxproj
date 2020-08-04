@@ -49,6 +49,7 @@
 		EA2B42DF24969A8000136D4F /* FCNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2B42DE24969A8000136D4F /* FCNavigationController.swift */; };
 		EA2B42E12496A00E00136D4F /* FCSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2B42E02496A00E00136D4F /* FCSearchBar.swift */; };
 		EA86B48624D9BDFF00C53A93 /* OrgDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA86B48524D9BDFF00C53A93 /* OrgDetailViewController.swift */; };
+		EA86B48824D9C75800C53A93 /* OrgDetailViewController+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA86B48724D9C75800C53A93 /* OrgDetailViewController+Constraints.swift */; };
 		EA91019324C76F2200CE7FC7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA91019224C76F2100CE7FC7 /* GoogleService-Info.plist */; };
 		EA91019524C77D9600CE7FC7 /* EngagementLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA91019424C77D9600CE7FC7 /* EngagementLevel.swift */; };
 		EA91019724C77DA800CE7FC7 /* ActionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA91019624C77DA800CE7FC7 /* ActionType.swift */; };
@@ -128,6 +129,7 @@
 		EA2B42DE24969A8000136D4F /* FCNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCNavigationController.swift; sourceTree = "<group>"; };
 		EA2B42E02496A00E00136D4F /* FCSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCSearchBar.swift; sourceTree = "<group>"; };
 		EA86B48524D9BDFF00C53A93 /* OrgDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgDetailViewController.swift; sourceTree = "<group>"; };
+		EA86B48724D9C75800C53A93 /* OrgDetailViewController+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OrgDetailViewController+Constraints.swift"; sourceTree = "<group>"; };
 		EA91019224C76F2100CE7FC7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EA91019424C77D9600CE7FC7 /* EngagementLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngagementLevel.swift; sourceTree = "<group>"; };
 		EA91019624C77DA800CE7FC7 /* ActionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionType.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 			children = (
 				48B4CA3B2495292C007B621E /* OrgDetailViewControllerOld.swift */,
 				EA86B48524D9BDFF00C53A93 /* OrgDetailViewController.swift */,
+				EA86B48724D9C75800C53A93 /* OrgDetailViewController+Constraints.swift */,
 			);
 			path = OrgDetailViewController;
 			sourceTree = "<group>";
@@ -636,6 +639,7 @@
 				EAE7118C24956EAB00418D64 /* ActionListViewController+TableView.swift in Sources */,
 				EA241A9124D08B2C00A8CBC8 /* Cause.swift in Sources */,
 				EA2B42D82496818400136D4F /* FCCaptionLabel.swift in Sources */,
+				EA86B48824D9C75800C53A93 /* OrgDetailViewController+Constraints.swift in Sources */,
 				EA2B42CF24967AD100136D4F /* FCHeaderLabel.swift in Sources */,
 				EA2B42D52496814700136D4F /* FCBodyLabel.swift in Sources */,
 				EAE711942495759300418D64 /* ActionListViewController+Buttons.swift in Sources */,
