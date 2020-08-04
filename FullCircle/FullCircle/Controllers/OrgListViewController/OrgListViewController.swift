@@ -24,8 +24,11 @@ class OrgListViewController: UIViewController {
     }()
     
     //MARK: - Internal Properties
-    //TODO: Pull orgs from FB
-    var organizations = [Organization]()
+    var organizations = [Organization]() {
+        didSet {
+            self.orgListTableView.reloadData()
+        }
+    }
     
     //MARK: - Lifecycle Methods
     override func viewDidLoad() {
@@ -37,6 +40,24 @@ class OrgListViewController: UIViewController {
         addConstraints()
         
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        getOrganizations()
+    }
+
+    //MARK: Private Methods
+    private func getOrganizations() {
+        FirestoreService.manager.getAllOrganizations { (result) in
+            switch result {
+            case .failure(let error):
+                print("error getting organizations: \(error)")
+            case .success(let organizations):
+                self.organizations = organizations
+            }
+        }
+    }
+    
     
 
 }
