@@ -9,22 +9,39 @@
 import UIKit
 
 class OrgDetailViewController: UIViewController {
-
+    
+    //MARK: - UI Objects
+    var orgImageView = UIImage()
+    
+    var orgNameLabel = UILabel()
+    
+    var orgDescriptionTextView = UITextView()
+    
+    var contactUsLabel = UILabel()
+    
+    var callButton = UIButton()
+    
+    var emailButton = UIButton()
+    
+    var websiteButton = UIButton()
+    
+    var messageButton = UIButton()
+    
+    var donateButton = UIButton()
+    
+    var actionsLabel = UILabel()
+    
+    var orgActionsTableView = UITableView()
+    
+    //MARK: - Internal Properties
+    var organization: Organization?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
