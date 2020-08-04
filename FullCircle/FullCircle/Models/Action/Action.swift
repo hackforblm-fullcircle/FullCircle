@@ -19,6 +19,29 @@ struct Action {
     let actionType: ActionType
     let actionMeta: [String : Any]
     
+    init?(from dict: [String: Any], id: String) {
+        guard let name = dict["name"] as? String,
+            let description = dict["description"] as? String,
+            let organizationID = dict["organizationID"] as? String,
+            let imageURL = dict["imageURL"] as? String,
+            let actionURL = dict["actionURL"] as? String,
+            let level = dict["engagementLevel"] as? String,
+            let engagementLevel =  EngagementLevel(rawValue: level),
+            let type = dict["actionType"] as? String,
+            let actionType = ActionType(rawValue: type),
+            let actionMeta = dict["actionMeta"] as? [String : Any] else { return nil }
+        
+        self.id = id
+        self.name = name
+        self.description = description
+        self.organizationID = organizationID
+        self.imageURL = imageURL
+        self.actionURL = actionURL
+        self.engagementLevel = engagementLevel
+        self.actionType = actionType
+        self.actionMeta = actionMeta
+    }
+    
     init(id: String ,name: String, description: String, organizationID: String, imageURL: String, iconString: String, engagementLevel: EngagementLevel, actionType: ActionType, actionMeta: [String : Any]) {
         self.id = "action-\(UUID().description)"
         self.name = name
@@ -29,6 +52,20 @@ struct Action {
         self.engagementLevel = engagementLevel
         self.actionType = actionType
         self.actionMeta = actionMeta
+    }
+
+    enum EngagementLevel: String {
+        case easy
+        case medium
+        case hard
+    }
+
+    enum ActionType: String {
+        case email
+        case protest
+        case donate
+        case phone
+        case petition
     }
 }
 

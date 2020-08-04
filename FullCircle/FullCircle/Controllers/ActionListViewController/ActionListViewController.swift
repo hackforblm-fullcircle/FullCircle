@@ -91,16 +91,27 @@ class ActionListViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = FCDesign.medGrey
         self.navigationItem.title = "FullCircle"
-        
         addSubviews()
         addConstraints()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        actionListTableView.reloadData()
+        getActions()
     }
-
+    
+    //MARK: Private Methods
+    //MARK: TODO - Differentiate Firestore requests based on app source
+    /* This view controller is used for lists of ALL actions (by all orgs) and actions for specific org. It will be important to differentiate these sources of data in the future when there is more pre-seeded/live data in Firestore */
+    private func getActions() {
+        FirestoreService.manager.getAllActions { (result) in
+            switch result {
+            case .failure(let error):
+                print("there was an error fetching actions: \(error)")
+            case .success(let actions):
+                self.actions = actions
+            }
+        }
+    }
 
 }
