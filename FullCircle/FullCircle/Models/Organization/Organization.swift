@@ -19,10 +19,21 @@ struct Organization {
     let donateURL: String
     let imageURL: String
     let organizationType: OrganizationType
-    let actions: [Action]
-    
-    init(id: String, name: String, description: String, address: String, phone: String, email: String, websiteURL: String, donateURL: String, imageURL: String, organizationType: OrganizationType, actions: [Action]) {
-        self.id = "organization-\(UUID().description)"
+    //TODO: Link Action with Organization by Organization ID
+     var actions: [Action]
+
+    init?(from dict: [String: Any], id: String) {
+        guard let name = dict["name"] as? String,
+            let description = dict["description"] as? String,
+            let address = dict["address"] as? String,
+            let phone = dict["phone"] as? String,
+            let email = dict["email"] as? String,
+            let websiteURL = dict["website"] as? String,
+            let donateURL = dict["donateURL"] as? String,
+            let logoImageURL = dict["logoString"] as? String,
+            let organizationType = dict["type"] as? OrganizationType
+            else { return nil }
+        self.id = id
         self.name = name
         self.description = description
         self.address = address
@@ -30,8 +41,18 @@ struct Organization {
         self.email = email
         self.websiteURL = websiteURL
         self.donateURL = donateURL
-        self.imageURL = imageURL
+        self.imageURL = logoImageURL
         self.organizationType = organizationType
-        self.actions = actions
+        actions = []
     }
+
+    enum OrganizationType: String {
+        case movement
+        case nonprofit
+        case forProfit
+        case lobby
+        case academic
+        case individual
+    }
+    
 }
