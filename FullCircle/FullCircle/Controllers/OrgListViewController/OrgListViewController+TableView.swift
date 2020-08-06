@@ -22,8 +22,8 @@ extension OrgListViewController: UITableViewDataSource {
         \(organization.organizationType)
         \(organization.address)
         """
-        // TODO: update image from FB
-//        cell.orgLogoImageView.image = UIImage(named: organization.imageURL)
+        // TODO: Get image from Firebase Storage
+        //        cell.orgLogoImageView.image = UIImage(named: organization.imageURL)
         
         return cell
     }

@@ -13,6 +13,7 @@ struct Action {
     let name: String
     let description: String
     let organizationID: String
+    let organizationName: String
     let actionURL: String
     let imageURL: String
     let engagementLevel: EngagementLevel
@@ -23,6 +24,7 @@ struct Action {
         guard let name = dict["name"] as? String,
             let description = dict["description"] as? String,
             let organizationID = dict["organizationID"] as? String,
+            let organizationName = dict["organizationName"] as? String,
             let imageURL = dict["imageURL"] as? String,
             let actionURL = dict["actionURL"] as? String,
             let level = dict["engagementLevel"] as? String,
@@ -35,6 +37,7 @@ struct Action {
         self.name = name
         self.description = description
         self.organizationID = organizationID
+        self.organizationName = organizationName
         self.imageURL = imageURL
         self.actionURL = actionURL
         self.engagementLevel = engagementLevel
