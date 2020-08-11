@@ -80,7 +80,7 @@ class ActionListViewController: UIViewController {
     }()
     
     //MARK: - Internal Properties
-    var actions = [Action]() {
+    internal var actions = [Action]() {
         didSet {
             actionListTableView.reloadData()
         }
@@ -100,7 +100,7 @@ class ActionListViewController: UIViewController {
         getActions()
     }
     
-    //MARK: Private Methods
+    //MARK: - Private Methods
     //MARK: TODO - Differentiate Firestore requests based on app source
     /* This view controller is used for lists of ALL actions (by all orgs) and actions for specific org. It will be important to differentiate these sources of data in the future when there is more pre-seeded/live data in Firestore */
     private func getActions() {

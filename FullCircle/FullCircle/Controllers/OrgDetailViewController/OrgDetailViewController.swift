@@ -53,8 +53,8 @@ extension OrgDetailViewController {
         var couplers = [BaseCellCoupler]()
         
         //Logo
-        // TODO: update image from FB
-//        let orgLogo = OrgDetailImageCellData(image: organization.imageURL)
+        // TODO: Get image from Firebase Storage
+        //        let orgLogo = OrgDetailImageCellData(image: organization.imageURL)
 //        let orgLogoCell = CellCoupler(OrgDetailImageCell.self, orgLogo)
 //        couplers.append(orgLogoCell)
         

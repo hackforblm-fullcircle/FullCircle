@@ -39,7 +39,7 @@ class FirestoreService {
         }
     }
     
-    //MARK: Actions. TODO: Add getAll(forOrganization:) and getAll(forUser:)
+    //MARK: Actions. TODO: getAll(forUser:)
     func getAllActions(completion: @escaping (Result<[Action], Error>) -> ()) {
         db.collection(ModelTypes.action.rawValue).getDocuments { (snapshot, error) in
             if let error = error {
@@ -55,5 +55,19 @@ class FirestoreService {
         }
     }
     
+    func getOrganizationActions(id: String, with completion: @escaping (Result<[Action], Error>) -> ()) {
+        db.collection(ModelTypes.action.rawValue).whereField("organizationID", isEqualTo: id).getDocuments { (snapshot, error) in
+            if let error = error {
+                completion(.failure(error))
+            } else {
+                let actions = snapshot?.documents.compactMap({ (snapshot) -> Action? in
+                    let actionID = snapshot.documentID
+                    let action = Action(from: snapshot.data(), id: actionID)
+                    return action
+                })
+                completion(.success(actions ?? []))
+            }
+        }
+    }
     
 }

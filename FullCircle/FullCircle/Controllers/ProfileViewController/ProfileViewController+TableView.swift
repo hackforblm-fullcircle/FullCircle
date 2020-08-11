@@ -35,9 +35,10 @@ extension ProfileViewController: UITableViewDataSource {
             
             cell.actionNameLabel.text = action.name
             
-            // TODO: Refactor to obtain org info from Firebase
-//            cell.orgNameLabel.text = action.organizationID.name
-//            cell.actionTypeImageView.image = UIImage(named: action.organizationID.logoString)!
+
+            cell.orgNameLabel.text = action.organizationName
+            // TODO: Get image from Firebase Storage
+            // cell.actionTypeImageView.image = UIImage(named: action.organizationID.logoString)!
 
             
             
