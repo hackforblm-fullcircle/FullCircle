@@ -6,7 +6,6 @@ target 'FullCircle' do
   use_frameworks!
 
   # Pods for FullCircle
-	pod 'CellDataCoupler', '2.2.0'
 	pod 'Firebase'
 	pod 'Firebase/Auth'
 	pod 'Firebase/Firestore'
