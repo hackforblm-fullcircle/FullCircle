@@ -698,14 +698,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		EAE7114F2494487A00418D64 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EAE711502494487A00418D64 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		EAE711542494487D00418D64 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
