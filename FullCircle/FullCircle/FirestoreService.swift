@@ -27,7 +27,7 @@ class FirestoreService {
     func getAllOrganizations(completion: @escaping (Result<[Organization], Error>) -> ()) {
         db.collection(ModelTypes.organization.rawValue).getDocuments { (snapshot, error) in
             if let error = error {
-                completion(.failure(error))
+                completion(.failure(AppError.couldNotRetrieveFirestoreData(error: error)))
             } else {
                 let organizations = snapshot?.documents.compactMap({ (snapshot) -> Organization? in
                     let orgID = snapshot.documentID
@@ -43,7 +43,7 @@ class FirestoreService {
     func getAllActions(completion: @escaping (Result<[Action], Error>) -> ()) {
         db.collection(ModelTypes.action.rawValue).getDocuments { (snapshot, error) in
             if let error = error {
-                completion(.failure(error))
+                completion( .failure(AppError.couldNotRetrieveFirestoreData(error: error)))
             } else {
                 let actions = snapshot?.documents.compactMap({ (snapshot) -> Action? in
                     let actionID = snapshot.documentID
