@@ -22,15 +22,11 @@
 		48B4CA3C2495292C007B621E /* OrgDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48B4CA372495292C007B621E /* OrgDetail.storyboard */; };
 		48B4CA3D2495292C007B621E /* OrgDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48B4CA382495292C007B621E /* OrgDetailCell.xib */; };
 		48B4CA3F2495292C007B621E /* OrgDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B4CA3A2495292C007B621E /* OrgDetailCell.swift */; };
-
-		48B4CA402495292C007B621E /* OrgDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B4CA3B2495292C007B621E /* OrgDetailViewController.swift */; };
+		48B4CA402495292C007B621E /* OrgDetailViewControllerOld.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B4CA3B2495292C007B621E /* OrgDetailViewControllerOld.swift */; };
 		542C0ED224D9BEEE00AD90E4 /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542C0ED124D9BEEE00AD90E4 /* FirestoreService.swift */; };
 		542C0ED424D9BF5900AD90E4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 542C0ED324D9BF5900AD90E4 /* GoogleService-Info.plist */; };
 		542C0ED824DC8DBB00AD90E4 /* FirebaseStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542C0ED724DC8DBB00AD90E4 /* FirebaseStorageService.swift */; };
 		542C0EDA24DC93DB00AD90E4 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542C0ED924DC93DB00AD90E4 /* AppError.swift */; };
-
-		48B4CA402495292C007B621E /* OrgDetailViewControllerOld.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B4CA3B2495292C007B621E /* OrgDetailViewControllerOld.swift */; };
-
 		6299F0BBDC150CDCC15D9E06 /* Pods_FullCircle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 911D212296111CB0683AD60E /* Pods_FullCircle.framework */; };
 		8642757812D7CA487627A848 /* Pods_FullCircleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58F2F8A4052B182DFF03AE11 /* Pods_FullCircleTests.framework */; };
 		EA241A8D24D0847E00A8CBC8 /* AppUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA241A8C24D0847E00A8CBC8 /* AppUser.swift */; };
@@ -56,13 +52,9 @@
 		EA2B42DC249689BD00136D4F /* FCCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2B42DA249689BD00136D4F /* FCCellView.swift */; };
 		EA2B42DF24969A8000136D4F /* FCNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2B42DE24969A8000136D4F /* FCNavigationController.swift */; };
 		EA2B42E12496A00E00136D4F /* FCSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2B42E02496A00E00136D4F /* FCSearchBar.swift */; };
-
+		EA4DD0E524E302E7003BAB31 /* OrgDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4DD0E424E302E7003BAB31 /* OrgDetailView.swift */; };
 		EA86B48624D9BDFF00C53A93 /* OrgDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA86B48524D9BDFF00C53A93 /* OrgDetailViewController.swift */; };
 		EA86B48824D9C75800C53A93 /* OrgDetailViewController+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA86B48724D9C75800C53A93 /* OrgDetailViewController+Constraints.swift */; };
-		EA91019324C76F2200CE7FC7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA91019224C76F2100CE7FC7 /* GoogleService-Info.plist */; };
-		EA91019524C77D9600CE7FC7 /* EngagementLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA91019424C77D9600CE7FC7 /* EngagementLevel.swift */; };
-		EA91019724C77DA800CE7FC7 /* ActionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA91019624C77DA800CE7FC7 /* ActionType.swift */; };
-
 		EAE7114A2494487A00418D64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE711492494487A00418D64 /* AppDelegate.swift */; };
 		EAE7114C2494487A00418D64 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE7114B2494487A00418D64 /* SceneDelegate.swift */; };
 		EAE711512494487A00418D64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAE7114F2494487A00418D64 /* Main.storyboard */; };
@@ -116,15 +108,11 @@
 		48B4CA372495292C007B621E /* OrgDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OrgDetail.storyboard; sourceTree = "<group>"; };
 		48B4CA382495292C007B621E /* OrgDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrgDetailCell.xib; sourceTree = "<group>"; };
 		48B4CA3A2495292C007B621E /* OrgDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgDetailCell.swift; sourceTree = "<group>"; };
-
-		48B4CA3B2495292C007B621E /* OrgDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgDetailViewController.swift; sourceTree = "<group>"; };
+		48B4CA3B2495292C007B621E /* OrgDetailViewControllerOld.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgDetailViewControllerOld.swift; sourceTree = "<group>"; };
 		542C0ED124D9BEEE00AD90E4 /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
 		542C0ED324D9BF5900AD90E4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		542C0ED724DC8DBB00AD90E4 /* FirebaseStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseStorageService.swift; sourceTree = "<group>"; };
 		542C0ED924DC93DB00AD90E4 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
-
-		48B4CA3B2495292C007B621E /* OrgDetailViewControllerOld.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgDetailViewControllerOld.swift; sourceTree = "<group>"; };
-
 		58F2F8A4052B182DFF03AE11 /* Pods_FullCircleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FullCircleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		911D212296111CB0683AD60E /* Pods_FullCircle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FullCircle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF64500D599452C845188048 /* Pods-FullCircleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FullCircleTests.release.xcconfig"; path = "Target Support Files/Pods-FullCircleTests/Pods-FullCircleTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -145,13 +133,9 @@
 		EA2B42DA249689BD00136D4F /* FCCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCCellView.swift; sourceTree = "<group>"; };
 		EA2B42DE24969A8000136D4F /* FCNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCNavigationController.swift; sourceTree = "<group>"; };
 		EA2B42E02496A00E00136D4F /* FCSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCSearchBar.swift; sourceTree = "<group>"; };
-
+		EA4DD0E424E302E7003BAB31 /* OrgDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgDetailView.swift; sourceTree = "<group>"; };
 		EA86B48524D9BDFF00C53A93 /* OrgDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgDetailViewController.swift; sourceTree = "<group>"; };
 		EA86B48724D9C75800C53A93 /* OrgDetailViewController+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OrgDetailViewController+Constraints.swift"; sourceTree = "<group>"; };
-		EA91019224C76F2100CE7FC7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		EA91019424C77D9600CE7FC7 /* EngagementLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngagementLevel.swift; sourceTree = "<group>"; };
-		EA91019624C77DA800CE7FC7 /* ActionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionType.swift; sourceTree = "<group>"; };
-
 		EAE711462494487A00418D64 /* FullCircle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FullCircle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAE711492494487A00418D64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EAE7114B2494487A00418D64 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -409,6 +393,7 @@
 				48B4CA4124952A10007B621E /* Cells */,
 				EAE7114F2494487A00418D64 /* Main.storyboard */,
 				48B4CA372495292C007B621E /* OrgDetail.storyboard */,
+				EA4DD0E424E302E7003BAB31 /* OrgDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -654,6 +639,7 @@
 				EAE7119024956F6400418D64 /* ActionListTableViewCell.swift in Sources */,
 				542C0EDA24DC93DB00AD90E4 /* AppError.swift in Sources */,
 				542C0ED824DC8DBB00AD90E4 /* FirebaseStorageService.swift in Sources */,
+				EA4DD0E524E302E7003BAB31 /* OrgDetailView.swift in Sources */,
 				EAE7118A249562AA00418D64 /* ActionListViewController+Constraints.swift in Sources */,
 				EAE7117224945FEB00418D64 /* ActionListViewController.swift in Sources */,
 				EAE7118C24956EAB00418D64 /* ActionListViewController+TableView.swift in Sources */,
@@ -689,9 +675,7 @@
 				EAE7117A249463B400418D64 /* Organization.swift in Sources */,
 				EAE7118724953F1700418D64 /* OrgListTableViewCell+Constraints.swift in Sources */,
 				EAE7116C24945FAA00418D64 /* HomeTabBarController.swift in Sources */,
-
 				EA86B48624D9BDFF00C53A93 /* OrgDetailViewController.swift in Sources */,
-
 				EAE7114C2494487A00418D64 /* SceneDelegate.swift in Sources */,
 				48B4CA3F2495292C007B621E /* OrgDetailCell.swift in Sources */,
 				EAE7117424945FF400418D64 /* ActionDetailViewController.swift in Sources */,
