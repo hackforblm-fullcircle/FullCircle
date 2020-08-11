@@ -34,5 +34,33 @@ class OrgDetailViewController: UIViewController {
         addSubviews()
         addConstraints()
     }
-    
+ 
+    //    private func callNumber() {
+    //        guard let number = info?.phoneInfo else { return }
+    //        if let url = URL(string: "telprompt://\(number)") {
+    //            let application = UIApplication.shared
+    //            guard application.canOpenURL(url) else {
+    //                return
+    //            }
+    //            application.open(url, options: [:], completionHandler: nil)
+    //        }
+    //    }
+    //
+    //    private func openEmailApp() {
+    //        guard let emailAddress = info?.emailInfo else { return }
+    //        if let emailURL = URL(string: "mailto:\(emailAddress)"), UIApplication.shared.canOpenURL(emailURL)
+    //        {
+    //            UIApplication.shared.open(emailURL, options: [:], completionHandler: nil)
+    //        }
+    //    }
+    //
+    //    private func openWebsite() {
+    //        guard let websiteAddress = info?.linkInfo else { return }
+    //        guard let url = URL(string: websiteAddress) else { return }
+    //
+    //        if UIApplication.shared.canOpenURL(url) {
+    //            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+    //        }
+    //    }
+
 }

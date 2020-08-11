@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		48B331DE24967DF5007080C7 /* OrgDetailButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B331DC24967DF5007080C7 /* OrgDetailButtonCell.swift */; };
-		48B331E224967FF0007080C7 /* OrgDetailContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B331E024967FEF007080C7 /* OrgDetailContactCell.swift */; };
 		542C0ED224D9BEEE00AD90E4 /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542C0ED124D9BEEE00AD90E4 /* FirestoreService.swift */; };
 		542C0ED424D9BF5900AD90E4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 542C0ED324D9BF5900AD90E4 /* GoogleService-Info.plist */; };
 		542C0ED824DC8DBB00AD90E4 /* FirebaseStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542C0ED724DC8DBB00AD90E4 /* FirebaseStorageService.swift */; };
@@ -78,8 +76,6 @@
 /* Begin PBXFileReference section */
 		28769A0811DD16EF70F6046C /* Pods-FullCircle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FullCircle.debug.xcconfig"; path = "Target Support Files/Pods-FullCircle/Pods-FullCircle.debug.xcconfig"; sourceTree = "<group>"; };
 		397BAF6C151D48409376AFF4 /* Pods-FullCircle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FullCircle.release.xcconfig"; path = "Target Support Files/Pods-FullCircle/Pods-FullCircle.release.xcconfig"; sourceTree = "<group>"; };
-		48B331DC24967DF5007080C7 /* OrgDetailButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgDetailButtonCell.swift; sourceTree = "<group>"; };
-		48B331E024967FEF007080C7 /* OrgDetailContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgDetailContactCell.swift; sourceTree = "<group>"; };
 		542C0ED124D9BEEE00AD90E4 /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
 		542C0ED324D9BF5900AD90E4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		542C0ED724DC8DBB00AD90E4 /* FirebaseStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseStorageService.swift; sourceTree = "<group>"; };
@@ -162,15 +158,6 @@
 				EA86B48724D9C75800C53A93 /* OrgDetailViewController+Constraints.swift */,
 			);
 			path = OrgDetailViewController;
-			sourceTree = "<group>";
-		};
-		48B4CA4124952A10007B621E /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				48B331DC24967DF5007080C7 /* OrgDetailButtonCell.swift */,
-				48B331E024967FEF007080C7 /* OrgDetailContactCell.swift */,
-			);
-			path = Cells;
 			sourceTree = "<group>";
 		};
 		CABD50E9D35E2C23C1A14846 /* Frameworks */ = {
@@ -347,7 +334,6 @@
 				EA2B42DE24969A8000136D4F /* FCNavigationController.swift */,
 				EA2B42CD24967AB300136D4F /* Labels */,
 				EAE7118524953A8300418D64 /* TableViewCells */,
-				48B4CA4124952A10007B621E /* Cells */,
 				EA4DD0E424E302E7003BAB31 /* OrgDetailView.swift */,
 			);
 			path = Views;
@@ -597,7 +583,6 @@
 				EA2B42CF24967AD100136D4F /* FCHeaderLabel.swift in Sources */,
 				EA2B42D52496814700136D4F /* FCBodyLabel.swift in Sources */,
 				EAE711942495759300418D64 /* ActionListViewController+Buttons.swift in Sources */,
-				48B331E224967FF0007080C7 /* OrgDetailContactCell.swift in Sources */,
 				EAE711922495707700418D64 /* ActionListTableViewCell+Constraints.swift in Sources */,
 				EA2B42BC2495B7DB00136D4F /* ProfileViewController.swift in Sources */,
 				EAE7117F249535BD00418D64 /* OrgListViewController+TableView.swift in Sources */,
@@ -622,7 +607,6 @@
 				EA241A8F24D08A6B00A8CBC8 /* UserAction.swift in Sources */,
 				EAE7116E24945FCD00418D64 /* OrgListViewController.swift in Sources */,
 				EAE711812495362300418D64 /* OrgListViewController+Constraints.swift in Sources */,
-				48B331DE24967DF5007080C7 /* OrgDetailButtonCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
