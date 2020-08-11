@@ -22,6 +22,7 @@ extension OrgListViewController: UITableViewDataSource {
         \(organization.organizationType)
         \(organization.address)
         """
+
         FirebaseStorageService.manager.getImage(at: organization.imageURL) { (result) in
             switch result {
             case .failure(let error):

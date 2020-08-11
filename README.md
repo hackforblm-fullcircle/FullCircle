@@ -17,7 +17,7 @@ A list of actions posted by organizations and details on selected actions.
 Ability to save actions.
 
 
-## Future Features
+## Features Underway
 - Account creation and management through Google Firebase/Firebase Auth
 - Unique account experiences for individuals and organizations
 - Instant messaging/chatting between users and organizations
