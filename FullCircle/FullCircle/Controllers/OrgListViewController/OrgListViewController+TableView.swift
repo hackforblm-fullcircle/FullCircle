@@ -45,8 +45,12 @@ extension OrgListViewController: UITableViewDelegate {
      //Navigation
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let thisOrganization = organizations[indexPath.row]
-        print("Pressed")
-        let vc = OrgDetailViewController.create(thisOrganization)
+
+        let vc = OrgDetailViewController()
+        vc.organization = thisOrganization
+        vc.orgDetailView.orgNameLabel.text = thisOrganization.name
+        vc.orgDetailView.orgDescriptionLabel.text = thisOrganization.description
+
         navigationController?.pushViewController(vc, animated: true)
     }
     
