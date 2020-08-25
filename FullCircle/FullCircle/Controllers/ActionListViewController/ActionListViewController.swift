@@ -80,6 +80,8 @@ class ActionListViewController: UIViewController {
     }()
     
     //MARK: - Internal Properties
+    internal var allActions = [Action]()
+    
     internal var actions = [Action]() {
         didSet {
             actionListTableView.reloadData()
@@ -109,6 +111,7 @@ class ActionListViewController: UIViewController {
             case .failure(let error):
                 print("there was an error fetching actions: \(error)")
             case .success(let actions):
+                self.allActions = actions
                 self.actions = actions
             }
         }
