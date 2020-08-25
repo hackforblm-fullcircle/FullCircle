@@ -11,7 +11,11 @@ import UIKit
 class ActionListViewController: UIViewController {
     
     //MARK: - UI Objects
-    lazy var searchBar = FCSearchBar()
+    lazy var searchBar: FCSearchBar = {
+        let searchBar = FCSearchBar()
+        searchBar.delegate = self
+        return searchBar
+    }()
     
     lazy var levelLabel: FCSubHeaderLabel = {
         let label = FCSubHeaderLabel()
