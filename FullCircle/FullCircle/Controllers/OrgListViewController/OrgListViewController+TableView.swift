@@ -20,7 +20,6 @@ extension OrgListViewController: UITableViewDataSource {
         cell.orgNameLabel.text = organization.name
         cell.orgDetailLabel.text = """
         \(organization.organizationType)
-        \(organization.address)
         """
 
         FirebaseStorageService.manager.getImage(at: organization.imageURL) { (result) in
