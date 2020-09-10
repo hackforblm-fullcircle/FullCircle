@@ -52,7 +52,7 @@ extension OrgListTableViewCell {
             orgNameLabel.leftAnchor.constraint(equalTo: infoView.leftAnchor, constant: 20),
             orgNameLabel.rightAnchor.constraint(equalTo: orgLogoImageView.leftAnchor, constant: -20),
             orgNameLabel.topAnchor.constraint(equalTo: infoView.topAnchor, constant: 20),
-//            orgNameLabel.heightAnchor.constraint(equalToConstant: 30)
+            orgNameLabel.heightAnchor.constraint(equalToConstant: 60)
         ])
     }
     
@@ -63,7 +63,7 @@ extension OrgListTableViewCell {
             orgDetailLabel.leftAnchor.constraint(equalTo: infoView.leftAnchor, constant: 20),
             orgDetailLabel.rightAnchor.constraint(equalTo: orgLogoImageView.leftAnchor, constant: -20),
             orgDetailLabel.bottomAnchor.constraint(equalTo: infoView.bottomAnchor, constant: -20),
-            orgDetailLabel.topAnchor.constraint(equalTo: orgNameLabel.bottomAnchor, constant: 20),
+            orgDetailLabel.topAnchor.constraint(equalTo: orgNameLabel.bottomAnchor, constant: 10),
         ])
     }
     
