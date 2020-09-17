@@ -68,9 +68,9 @@ extension ActionListTableViewCell {
         
         NSLayoutConstraint.activate([
             actionTypeImageView.centerYAnchor.constraint(equalTo: infoView.centerYAnchor),
-            actionTypeImageView.rightAnchor.constraint(equalTo: infoView.rightAnchor, constant: -10),
-            actionTypeImageView.heightAnchor.constraint(equalTo: infoView.heightAnchor, multiplier: 0.8),
-            actionTypeImageView.widthAnchor.constraint(equalTo: infoView.heightAnchor, multiplier: 0.8)
+            actionTypeImageView.rightAnchor.constraint(equalTo: infoView.rightAnchor, constant: -20),
+            actionTypeImageView.heightAnchor.constraint(equalTo: infoView.heightAnchor, multiplier: 0.5),
+            actionTypeImageView.widthAnchor.constraint(equalTo: infoView.heightAnchor, multiplier: 0.5)
 
         ])
     }

@@ -19,8 +19,20 @@ extension ActionListViewController: UITableViewDataSource {
         
         cell.actionNameLabel.text = action.name
         cell.orgNameLabel.text = action.organizationName
-        // TODO: Get image from Firebase Storage
-        //        cell.actionTypeImageView.image = UIImage(named: action.organizationID.logoString)!
+        
+        switch action.actionType {
+        case .donate:
+            cell.actionTypeImageView.image = UIImage(named: "action-donate")
+        case .email:
+            cell.actionTypeImageView.image = UIImage(named: "action-email")
+        case .petition:
+            cell.actionTypeImageView.image = UIImage(named: "action-petition")
+        case .phone:
+            cell.actionTypeImageView.image = UIImage(named: "action-call")
+        case .protest:
+            cell.actionTypeImageView.image = UIImage(named: "action-event")
+
+        }
         
         
         

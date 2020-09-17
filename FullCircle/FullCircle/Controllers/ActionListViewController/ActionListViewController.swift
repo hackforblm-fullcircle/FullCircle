@@ -11,7 +11,11 @@ import UIKit
 class ActionListViewController: UIViewController {
     
     //MARK: - UI Objects
-    lazy var searchBar = FCSearchBar()
+    lazy var searchBar: FCSearchBar = {
+        let searchBar = FCSearchBar()
+        searchBar.delegate = self
+        return searchBar
+    }()
     
     lazy var levelLabel: FCSubHeaderLabel = {
         let label = FCSubHeaderLabel()
@@ -80,6 +84,8 @@ class ActionListViewController: UIViewController {
     }()
     
     //MARK: - Internal Properties
+    internal var allActions = [Action]()
+    
     internal var actions = [Action]() {
         didSet {
             actionListTableView.reloadData()
@@ -109,6 +115,7 @@ class ActionListViewController: UIViewController {
             case .failure(let error):
                 print("there was an error fetching actions: \(error)")
             case .success(let actions):
+                self.allActions = actions
                 self.actions = actions
             }
         }

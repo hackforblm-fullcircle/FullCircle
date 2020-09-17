@@ -36,6 +36,7 @@
 		EA2B42DC249689BD00136D4F /* FCCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2B42DA249689BD00136D4F /* FCCellView.swift */; };
 		EA2B42DF24969A8000136D4F /* FCNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2B42DE24969A8000136D4F /* FCNavigationController.swift */; };
 		EA2B42E12496A00E00136D4F /* FCSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2B42E02496A00E00136D4F /* FCSearchBar.swift */; };
+		EA3D910724F5768D00CD4CAF /* ActionListViewController+SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3D910624F5768D00CD4CAF /* ActionListViewController+SearchBar.swift */; };
 		EA4DD0E524E302E7003BAB31 /* OrgDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4DD0E424E302E7003BAB31 /* OrgDetailView.swift */; };
 		EA86B48624D9BDFF00C53A93 /* OrgDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA86B48524D9BDFF00C53A93 /* OrgDetailViewController.swift */; };
 		EA86B48824D9C75800C53A93 /* OrgDetailViewController+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA86B48724D9C75800C53A93 /* OrgDetailViewController+Constraints.swift */; };
@@ -100,6 +101,7 @@
 		EA2B42DA249689BD00136D4F /* FCCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCCellView.swift; sourceTree = "<group>"; };
 		EA2B42DE24969A8000136D4F /* FCNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCNavigationController.swift; sourceTree = "<group>"; };
 		EA2B42E02496A00E00136D4F /* FCSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCSearchBar.swift; sourceTree = "<group>"; };
+		EA3D910624F5768D00CD4CAF /* ActionListViewController+SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActionListViewController+SearchBar.swift"; sourceTree = "<group>"; };
 		EA4DD0E424E302E7003BAB31 /* OrgDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgDetailView.swift; sourceTree = "<group>"; };
 		EA86B48524D9BDFF00C53A93 /* OrgDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgDetailViewController.swift; sourceTree = "<group>"; };
 		EA86B48724D9C75800C53A93 /* OrgDetailViewController+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OrgDetailViewController+Constraints.swift"; sourceTree = "<group>"; };
@@ -366,6 +368,7 @@
 				EAE711932495759300418D64 /* ActionListViewController+Buttons.swift */,
 				EAE71189249562AA00418D64 /* ActionListViewController+Constraints.swift */,
 				EAE7118B24956EAB00418D64 /* ActionListViewController+TableView.swift */,
+				EA3D910624F5768D00CD4CAF /* ActionListViewController+SearchBar.swift */,
 			);
 			path = ActionListViewController;
 			sourceTree = "<group>";
@@ -570,6 +573,7 @@
 			files = (
 				EA2B42DF24969A8000136D4F /* FCNavigationController.swift in Sources */,
 				EAE7119024956F6400418D64 /* ActionListTableViewCell.swift in Sources */,
+				EA3D910724F5768D00CD4CAF /* ActionListViewController+SearchBar.swift in Sources */,
 				542C0EDA24DC93DB00AD90E4 /* AppError.swift in Sources */,
 				542C0ED824DC8DBB00AD90E4 /* FirebaseStorageService.swift in Sources */,
 				EA4DD0E524E302E7003BAB31 /* OrgDetailView.swift in Sources */,
