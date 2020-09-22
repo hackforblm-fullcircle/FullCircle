@@ -160,8 +160,9 @@ class LoginViewController: UIViewController {
         //MARK: TODO: resize image
         NSLayoutConstraint.activate([
                                         logoImage.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 60),
-                                        logoImage.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor, constant: 60),
-                                        logoImage.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor, constant: -16)])
+                                        logoImage.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor, constant: 100),
+                                        logoImage.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor, constant: -100),
+                                        logoImage.heightAnchor.constraint(equalTo: logoImage.widthAnchor)])
     }
     
     private func setupLoginStackView() {
