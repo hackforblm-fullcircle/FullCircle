@@ -12,21 +12,16 @@ class LoginViewController: UIViewController {
     
     //MARK: UI Objects
     
-    lazy var logoLabel: UILabel = {
-        let label = UILabel()
-        label.numberOfLines = 0
-        label.text = "Firebae"
-        label.font = UIFont(name: "Verdana-Bold", size: 60)
-        label.textColor = UIColor(red: 255/255, green: 86/255, blue: 0/255, alpha: 1.0)
-        label.backgroundColor = .clear
-        label.textAlignment = .center
-        return label
+    lazy var logoImage: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "AppIcon")
+        return imageView
     }()
     
     lazy var emailTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "Enter Email"
-        textField.font = UIFont(name: "Verdana", size: 14)
+        textField.font = FCDesign.subHeaderFont
         textField.backgroundColor = .white
         textField.borderStyle = .bezel
         textField.autocorrectionType = .no
@@ -37,7 +32,7 @@ class LoginViewController: UIViewController {
     lazy var passwordTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "Enter Password"
-        textField.font = UIFont(name: "Verdana", size: 14)
+        textField.font = FCDesign.subHeaderFont
         textField.backgroundColor = .white
         textField.borderStyle = .bezel
         textField.autocorrectionType = .no
@@ -50,8 +45,8 @@ class LoginViewController: UIViewController {
         let button = UIButton(type: .system)
         button.setTitle("Login", for: .normal)
         button.setTitleColor(.white, for: .normal)
-        button.titleLabel?.font = UIFont(name: "Verdana-Bold", size: 14)
-        button.backgroundColor = UIColor(red: 255/255, green: 67/255, blue: 0/255, alpha: 1)
+        button.titleLabel?.font = FCDesign.subHeaderFont
+        button.backgroundColor = FCDesign.fadedBlue
         button.layer.cornerRadius = 5
         button.addTarget(self, action: #selector(tryLogin), for: .touchUpInside)
         button.isEnabled = false
@@ -62,11 +57,11 @@ class LoginViewController: UIViewController {
         let button = UIButton(type: .system)
         let attributedTitle = NSMutableAttributedString(string: "Dont have an account?  ",
                                                         attributes: [
-                                                            NSAttributedString.Key.font: UIFont(name: "Verdana", size: 14)!,
-                                                            NSAttributedString.Key.foregroundColor: UIColor.white])
+                                                            NSAttributedString.Key.font: FCDesign.bodyFont,
+                                                            NSAttributedString.Key.foregroundColor: FCDesign.lightBlue])
         attributedTitle.append(NSAttributedString(string: "Sign Up",
-                                                  attributes: [NSAttributedString.Key.font: UIFont(name: "Verdana-Bold", size: 14)!,
-                                                               NSAttributedString.Key.foregroundColor:  UIColor(red: 17/255, green: 154/255, blue: 237/255, alpha: 1)]))
+                                                  attributes: [NSAttributedString.Key.font: FCDesign.bodyFont,
+                                                               NSAttributedString.Key.foregroundColor:  FCDesign.darkBlue]))
         button.setAttributedTitle(attributedTitle, for: .normal)
         button.addTarget(self, action: #selector(showSignUp), for: .touchUpInside)
         return button
@@ -76,7 +71,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor(red: 198/255, green: 198/255, blue: 198/255, alpha: 1)
+        view.backgroundColor = FCDesign.lightGrey
         setupSubViews()
     }
     
@@ -84,12 +79,12 @@ class LoginViewController: UIViewController {
     
     @objc func validateFields() {
         guard emailTextField.hasText, passwordTextField.hasText else {
-            loginButton.backgroundColor = UIColor(red: 255/255, green: 67/255, blue: 0/255, alpha: 0.5)
+            loginButton.backgroundColor = FCDesign.fadedBlue
             loginButton.isEnabled = false
             return
         }
         loginButton.isEnabled = true
-        loginButton.backgroundColor = UIColor(red: 255/255, green: 67/255, blue: 0/255, alpha: 1)
+        loginButton.backgroundColor = FCDesign.lightBlue
     }
     
     @objc func showSignUp() {
@@ -103,8 +98,6 @@ class LoginViewController: UIViewController {
             showAlert(with: "Error", and: "Please fill out all fields.")
             return
         }
-        
-        //MARK: TODO - remove whitespace (if any) from email/password
         
         guard email.isValidEmail else {
             showAlert(with: "Error", and: "Please enter a valid email")
@@ -136,23 +129,18 @@ class LoginViewController: UIViewController {
         case .success:
             
             guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
-                let sceneDelegate = windowScene.delegate as? SceneDelegate, let window = sceneDelegate.window
-                else {
-                    //MARK: TODO - handle could not swap root view controller
-                    return
+                  let sceneDelegate = windowScene.delegate as? SceneDelegate, let window = sceneDelegate.window
+            else {
+                //MARK: TODO - error
+                return
             }
             
-            //MARK: TODO - refactor this logic into scene delegate
             UIView.transition(with: window, duration: 0.3, options: .transitionFlipFromBottom, animations: {
-                if FirebaseAuthService.manager.currentUser?.photoURL != nil {
-                    window.rootViewController = RedditTabBarViewController()
-                } else {
-                    window.rootViewController = {
-                        let profileSetupVC = ProfileEditViewController()
-                        profileSetupVC.settingFromLogin = true
-                        return profileSetupVC
-                    }()
-                }
+                window.rootViewController = {
+                    let homeVC = HomeTabBarController()
+                    homeVC.selectedIndex = 0
+                    return homeVC
+                }()
             }, completion: nil)
         }
     }
@@ -166,13 +154,14 @@ class LoginViewController: UIViewController {
     }
     
     private func setupLogoLabel() {
-        view.addSubview(logoLabel)
+        view.addSubview(logoImage)
         
-        logoLabel.translatesAutoresizingMaskIntoConstraints = false
+        logoImage.translatesAutoresizingMaskIntoConstraints = false
+        //MARK: TODO: resize image
         NSLayoutConstraint.activate([
-            logoLabel.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 60),
-            logoLabel.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
-            logoLabel.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor, constant: -16)])
+                                        logoImage.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 60),
+                                        logoImage.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor, constant: 60),
+                                        logoImage.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor, constant: -16)])
     }
     
     private func setupLoginStackView() {
@@ -184,10 +173,10 @@ class LoginViewController: UIViewController {
         
         stackView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            stackView.bottomAnchor.constraint(equalTo: createAccountButton.topAnchor, constant: -50),
-            stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
-            stackView.heightAnchor.constraint(equalToConstant: 130)])
+                                        stackView.bottomAnchor.constraint(equalTo: createAccountButton.topAnchor, constant: -50),
+                                        stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+                                        stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+                                        stackView.heightAnchor.constraint(equalToConstant: 130)])
     }
     
     private func setupCreateAccountButton() {
@@ -195,9 +184,9 @@ class LoginViewController: UIViewController {
         
         createAccountButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            createAccountButton.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            createAccountButton.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            createAccountButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
-            createAccountButton.heightAnchor.constraint(equalToConstant: 50)])
+                                        createAccountButton.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+                                        createAccountButton.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+                                        createAccountButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+                                        createAccountButton.heightAnchor.constraint(equalToConstant: 50)])
     }
 }

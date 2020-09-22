@@ -19,11 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.windowScene = windowScene
         
-        window?.rootViewController = {
-            let homeVC = HomeTabBarController()
-            homeVC.selectedIndex = 0
-            return homeVC
-        }()
+        window?.rootViewController = LoginViewController()
         
         window?.makeKeyAndVisible()
     }

@@ -17,8 +17,8 @@ class SignUpViewController: UIViewController {
         let label = UILabel()
         label.numberOfLines = 0
         label.text = "FullCircle: Create Account"
-        label.font = UIFont(name: "Verdana-Bold", size: 28)
-        label.textColor = UIColor(red: 255/255, green: 86/255, blue: 0/255, alpha: 1.0)
+        label.font = FCDesign.headerFont
+        label.textColor = FCDesign.darkBlue
         label.backgroundColor = .clear
         label.textAlignment = .center
         return label
@@ -27,7 +27,7 @@ class SignUpViewController: UIViewController {
     lazy var emailTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "Enter Email"
-        textField.font = UIFont(name: "Verdana", size: 14)
+        textField.font = FCDesign.subHeaderFont
         textField.backgroundColor = .white
         textField.borderStyle = .bezel
         textField.autocorrectionType = .no
@@ -38,7 +38,7 @@ class SignUpViewController: UIViewController {
     lazy var passwordTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "Enter Password"
-        textField.font = UIFont(name: "Verdana", size: 14)
+        textField.font = FCDesign.subHeaderFont
         textField.backgroundColor = .white
         textField.borderStyle = .bezel
         textField.autocorrectionType = .no
@@ -51,8 +51,8 @@ class SignUpViewController: UIViewController {
         let button = UIButton(type: .system)
         button.setTitle("Create", for: .normal)
         button.setTitleColor(.white, for: .normal)
-        button.titleLabel?.font = UIFont(name: "Verdana-Bold", size: 14)
-        button.backgroundColor = UIColor(red: 255/255, green: 67/255, blue: 0/255, alpha: 1)
+        button.titleLabel?.font = FCDesign.subHeaderFont
+        button.backgroundColor = FCDesign.fadedBlue
         button.layer.cornerRadius = 5
         button.addTarget(self, action: #selector(trySignUp), for: .touchUpInside)
         button.isEnabled = false
@@ -63,7 +63,7 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor(red: 198/255, green: 198/255, blue: 198/255, alpha: 1)
+        view.backgroundColor = FCDesign.lightGrey
         setupHeaderLabel()
         setupCreateStackView()
     }
@@ -72,12 +72,12 @@ class SignUpViewController: UIViewController {
     
     @objc func validateFields() {
         guard emailTextField.hasText, passwordTextField.hasText else {
-            createButton.backgroundColor = UIColor(red: 255/255, green: 67/255, blue: 0/255, alpha: 0.5)
+            createButton.backgroundColor = FCDesign.fadedBlue
             createButton.isEnabled = false
             return
         }
         createButton.isEnabled = true
-        createButton.backgroundColor = UIColor(red: 255/255, green: 67/255, blue: 0/255, alpha: 1)
+        createButton.backgroundColor = FCDesign.lightBlue
     }
     
     @objc func trySignUp() {
@@ -113,7 +113,7 @@ class SignUpViewController: UIViewController {
         DispatchQueue.main.async { [weak self] in
             switch result {
             case .success(let user):
-                FirestoreService.manager.createAppUser(user: AppUser(from: user)) { [weak self] newResult in
+                FirestoreService.manager.createAppUser(user: AppUser(user: user)) { [weak self] newResult in
                     self?.handleCreatedUserInFirestore(result: newResult)
                 }
             case .failure(let error):
@@ -128,21 +128,15 @@ class SignUpViewController: UIViewController {
             guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
                 let sceneDelegate = windowScene.delegate as? SceneDelegate, let window = sceneDelegate.window
                 else {
-                    //MARK: TODO - handle could not swap root view controller
                     return
             }
             
-            //MARK: TODO - refactor this logic into scene delegate
             UIView.transition(with: window, duration: 0.3, options: .transitionFlipFromBottom, animations: {
-                if FirebaseAuthService.manager.currentUser?.photoURL != nil {
-                    window.rootViewController = RedditTabBarViewController()
-                } else {
                     window.rootViewController = {
-                        let profileSetupVC = ProfileEditViewController()
-                        profileSetupVC.settingFromLogin = true
-                        return profileSetupVC
+                        let homeVC = HomeTabBarController()
+                        homeVC.selectedIndex = 0
+                        return homeVC
                     }()
-                }
             }, completion: nil)
         case .failure(let error):
             self.showAlert(with: "Error creating user", and: "An error occured while creating new account \(error)")
