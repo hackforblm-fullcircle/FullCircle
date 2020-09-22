@@ -18,6 +18,9 @@ struct Action {
     let imageURL: String
     let engagementLevel: EngagementLevel
     let actionType: ActionType
+    let startDate: Date
+    let endDate: Date
+    let timelineType: TimelineType
     let actionMeta: [String : Any]
     
     init?(from dict: [String: Any], id: String) {
