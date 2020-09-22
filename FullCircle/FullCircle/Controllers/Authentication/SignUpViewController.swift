@@ -92,7 +92,10 @@ class SignUpViewController: UIViewController {
         }
         
         guard password.isValidPassword else {
-            showAlert(with: "Error", and: "Please enter a valid password. Passwords must have at least 8 characters.")
+            showAlert(with: "Error",
+                      and: """
+                    Please enter a valid password. Passwords must have at least one capital letter, one lower case letter, one number, and be at least 8 characters long.
+                    """)
             return
         }
         

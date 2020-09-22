@@ -103,12 +103,7 @@ class LoginViewController: UIViewController {
             showAlert(with: "Error", and: "Please enter a valid email")
             return
         }
-        
-        guard password.isValidPassword else {
-            showAlert(with: "Error", and: "Please enter a valid password. Passwords must have at least 8 characters.")
-            return
-        }
-        
+                
         FirebaseAuthService.manager.loginUser(email: email.lowercased(), password: password) { (result) in
             self.handleLoginResponse(with: result)
         }
