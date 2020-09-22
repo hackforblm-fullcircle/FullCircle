@@ -27,18 +27,25 @@ struct AppUser {
     //TODO: Add goal property
     
     // Initializers
-    init(user: User, zipCode: Int?, causes: [String], userActions: [UserAction], followedOrganizations: [String], friends: [String]) {
+    init(user: User, zipCode: Int? = nil, causes: [String] = [], userActions: [String] = [], followedOrganizations: [String] = [], friends: [String] = []) {
         self.id = user.uid
         self.email = user.email
         self.userName = user.displayName
         self.dateCreated = user.metadata.creationDate
         self.photoURL = user.photoURL?.absoluteString
         
-        self.zipCode = nil  // input during signup?
-        self.userActions = []
-        self.followedOrganizations = []
-        self.causes = []    // input during signup/onboarding?
-        self.friends = []
+        self.zipCode = zipCode  // input during signup?
+        self.userActions = userActions
+        self.followedOrganizations = followedOrganizations
+        self.causes = causes    // input during signup/onboarding?
+        self.friends = friends
     }
+    
+    var fieldsDict: [String: Any] {
+            return [
+                "userName": self.userName ?? "",
+                "email": self.email ?? ""
+            ]
+        }
 }
 

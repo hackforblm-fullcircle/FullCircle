@@ -11,6 +11,10 @@
 		542C0ED424D9BF5900AD90E4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 542C0ED324D9BF5900AD90E4 /* GoogleService-Info.plist */; };
 		542C0ED824DC8DBB00AD90E4 /* FirebaseStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542C0ED724DC8DBB00AD90E4 /* FirebaseStorageService.swift */; };
 		542C0EDA24DC93DB00AD90E4 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542C0ED924DC93DB00AD90E4 /* AppError.swift */; };
+		546F6BA9251A397B002BF734 /* FirebaseAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546F6BA8251A397B002BF734 /* FirebaseAuthService.swift */; };
+		546F6BAD251A3A06002BF734 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546F6BAC251A3A06002BF734 /* LoginViewController.swift */; };
+		546F6BB4251A3C3B002BF734 /* String+Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546F6BB3251A3C3B002BF734 /* String+Validation.swift */; };
+		546F6BB8251A3C5C002BF734 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546F6BB7251A3C5C002BF734 /* SignUpViewController.swift */; };
 		6299F0BBDC150CDCC15D9E06 /* Pods_FullCircle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 911D212296111CB0683AD60E /* Pods_FullCircle.framework */; };
 		8642757812D7CA487627A848 /* Pods_FullCircleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58F2F8A4052B182DFF03AE11 /* Pods_FullCircleTests.framework */; };
 		EA241A8D24D0847E00A8CBC8 /* AppUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA241A8C24D0847E00A8CBC8 /* AppUser.swift */; };
@@ -81,6 +85,10 @@
 		542C0ED324D9BF5900AD90E4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		542C0ED724DC8DBB00AD90E4 /* FirebaseStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseStorageService.swift; sourceTree = "<group>"; };
 		542C0ED924DC93DB00AD90E4 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		546F6BA8251A397B002BF734 /* FirebaseAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthService.swift; sourceTree = "<group>"; };
+		546F6BAC251A3A06002BF734 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		546F6BB3251A3C3B002BF734 /* String+Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Validation.swift"; sourceTree = "<group>"; };
+		546F6BB7251A3C5C002BF734 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		58F2F8A4052B182DFF03AE11 /* Pods_FullCircleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FullCircleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		911D212296111CB0683AD60E /* Pods_FullCircle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FullCircle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF64500D599452C845188048 /* Pods-FullCircleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FullCircleTests.release.xcconfig"; path = "Target Support Files/Pods-FullCircleTests/Pods-FullCircleTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -160,6 +168,25 @@
 				EA86B48724D9C75800C53A93 /* OrgDetailViewController+Constraints.swift */,
 			);
 			path = OrgDetailViewController;
+			sourceTree = "<group>";
+		};
+		546F6BB0251A3A39002BF734 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				546F6BB7251A3C5C002BF734 /* SignUpViewController.swift */,
+				546F6BAC251A3A06002BF734 /* LoginViewController.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		546F6BBB251A3CA1002BF734 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				542C0ED124D9BEEE00AD90E4 /* FirestoreService.swift */,
+				542C0ED724DC8DBB00AD90E4 /* FirebaseStorageService.swift */,
+				546F6BA8251A397B002BF734 /* FirebaseAuthService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		CABD50E9D35E2C23C1A14846 /* Frameworks */ = {
@@ -265,11 +292,11 @@
 				EAE711762494623700418D64 /* Controllers */,
 				EAE7117D249463FB00418D64 /* Views */,
 				FC380B56249566CC00DE703D /* Persistence */,
+				546F6BBB251A3CA1002BF734 /* Services */,
 				EAE711772494626E00418D64 /* Supporting Files */,
 				EAE711572494487D00418D64 /* Info.plist */,
-				542C0ED124D9BEEE00AD90E4 /* FirestoreService.swift */,
-				542C0ED724DC8DBB00AD90E4 /* FirebaseStorageService.swift */,
 				542C0ED924DC93DB00AD90E4 /* AppError.swift */,
+				546F6BB3251A3C3B002BF734 /* String+Validation.swift */,
 				542C0ED324D9BF5900AD90E4 /* GoogleService-Info.plist */,
 			);
 			path = FullCircle;
@@ -302,6 +329,7 @@
 				EAE7118224953A4E00418D64 /* OrgListViewController */,
 				48B331E42496813D007080C7 /* OrgDetailViewController */,
 				EAE7118824955ED400418D64 /* ActionListViewController */,
+				546F6BB0251A3A39002BF734 /* Authentication */,
 				EAE7117324945FF400418D64 /* ActionDetailViewController.swift */,
 				FC380B5B2496740D00DE703D /* ActionDetailViewController+Map.swift */,
 			);
@@ -571,6 +599,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				546F6BAD251A3A06002BF734 /* LoginViewController.swift in Sources */,
 				EA2B42DF24969A8000136D4F /* FCNavigationController.swift in Sources */,
 				EAE7119024956F6400418D64 /* ActionListTableViewCell.swift in Sources */,
 				EA3D910724F5768D00CD4CAF /* ActionListViewController+SearchBar.swift in Sources */,
@@ -592,7 +621,9 @@
 				EAE7117F249535BD00418D64 /* OrgListViewController+TableView.swift in Sources */,
 				FC380B5C2496740D00DE703D /* ActionDetailViewController+Map.swift in Sources */,
 				EAE7117C249463CA00418D64 /* Action.swift in Sources */,
+				546F6BB8251A3C5C002BF734 /* SignUpViewController.swift in Sources */,
 				EA2B42BE2495B98800136D4F /* ProfileViewController+TableView.swift in Sources */,
+				546F6BB4251A3C3B002BF734 /* String+Validation.swift in Sources */,
 				EA2B42C02495BD7A00136D4F /* ProfileViewController+Constraints.swift in Sources */,
 				EA2B42DB249689BD00136D4F /* FCCellView.swift in Sources */,
 				EA2B42D224967D5A00136D4F /* FCSubHeaderLabel.swift in Sources */,
@@ -602,6 +633,7 @@
 				EA241A8D24D0847E00A8CBC8 /* AppUser.swift in Sources */,
 				EAE7118424953A7D00418D64 /* OrgListTableViewCell.swift in Sources */,
 				EA2B42E12496A00E00136D4F /* FCSearchBar.swift in Sources */,
+				546F6BA9251A397B002BF734 /* FirebaseAuthService.swift in Sources */,
 				EAE7117A249463B400418D64 /* Organization.swift in Sources */,
 				EAE7118724953F1700418D64 /* OrgListTableViewCell+Constraints.swift in Sources */,
 				EAE7116C24945FAA00418D64 /* HomeTabBarController.swift in Sources */,

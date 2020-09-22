@@ -21,7 +21,20 @@ class FirestoreService {
     enum ModelTypes: String {
         case organization
         case action
+        case user
     }
+    
+    //MARK: AppUsers
+        func createAppUser(user: AppUser, completion: @escaping (Result<(), Error>) -> ()) {
+            var fields = user.fieldsDict
+            db.collection(ModelTypes.user.rawValue).document(user.id).setData(fields) { (error) in
+                if let error = error {
+                    completion(.failure(error))
+                    print(error)
+                }
+                completion(.success(()))
+            }
+        }
     
     //MARK: Organizations
     func getAllOrganizations(completion: @escaping (Result<[Organization], Error>) -> ()) {
