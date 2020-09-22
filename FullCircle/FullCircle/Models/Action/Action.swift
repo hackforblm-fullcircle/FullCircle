@@ -34,6 +34,10 @@ struct Action {
             let engagementLevel =  EngagementLevel(rawValue: level),
             let type = dict["actionType"] as? String,
             let actionType = ActionType(rawValue: type),
+            let startDate = dict["startDate"] as? Date,
+            let endDate = dict["endDate"] as? Date,
+            let timeType = dict["timelineType"] as? String,
+            let timelineType = TimelineType(rawValue: timeType),
             let actionMeta = dict["actionMeta"] as? [String : Any] else { return nil }
         
         self.id = id
@@ -45,6 +49,9 @@ struct Action {
         self.actionURL = actionURL
         self.engagementLevel = engagementLevel
         self.actionType = actionType
+        self.startDate = startDate
+        self.endDate = endDate
+        self.timelineType = timelineType
         self.actionMeta = actionMeta
     }
 
