@@ -68,5 +68,18 @@ struct Action {
         case phone
         case petition
     }
+    
+    enum TimelineType: String {
+        case ongoing
+        case recurring
+        case range
+        case oneOff
+    }
+    
+    enum RecurrenceType: String {
+        case annually
+        case monthly
+        case weekly
+    }
 }
 
