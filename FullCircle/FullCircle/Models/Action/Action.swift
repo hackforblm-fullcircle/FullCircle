@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import FirebaseFirestore
 
 struct Action {
     let id: String
@@ -18,6 +19,9 @@ struct Action {
     let imageURL: String
     let engagementLevel: EngagementLevel
     let actionType: ActionType
+    let startDate: Date
+    let endDate: Date
+    let timelineType: TimelineType
     let actionMeta: [String : Any]
     
     init?(from dict: [String: Any], id: String) {
@@ -31,6 +35,10 @@ struct Action {
             let engagementLevel =  EngagementLevel(rawValue: level),
             let type = dict["actionType"] as? String,
             let actionType = ActionType(rawValue: type),
+            let startDate = (dict["startDate"] as? Timestamp)?.dateValue(),
+            let endDate = (dict["endDate"] as? Timestamp)?.dateValue(),
+            let timeType = dict["timelineType"] as? String,
+            let timelineType = TimelineType(rawValue: timeType),
             let actionMeta = dict["actionMeta"] as? [String : Any] else { return nil }
         
         self.id = id
@@ -42,6 +50,9 @@ struct Action {
         self.actionURL = actionURL
         self.engagementLevel = engagementLevel
         self.actionType = actionType
+        self.startDate = startDate
+        self.endDate = endDate
+        self.timelineType = timelineType
         self.actionMeta = actionMeta
     }
 
@@ -57,6 +68,19 @@ struct Action {
         case donate
         case phone
         case petition
+    }
+    
+    enum TimelineType: String {
+        case ongoing
+        case recurring
+        case range
+        case oneOff
+    }
+    
+    enum RecurrenceType: String {
+        case annually
+        case monthly
+        case weekly
     }
 }
 
