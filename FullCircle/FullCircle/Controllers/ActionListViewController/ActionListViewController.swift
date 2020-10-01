@@ -99,6 +99,8 @@ class ActionListViewController: UIViewController {
         self.navigationItem.title = "FullCircle"
         addSubviews()
         addConstraints()
+        
+        setFilterButton()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -120,5 +122,10 @@ class ActionListViewController: UIViewController {
             }
         }
     }
+    
+    private func setFilterButton() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "bookmark"), style: .plain, target: self, action: #selector(filterButtonPressed))
+    }
 
+    
 }
