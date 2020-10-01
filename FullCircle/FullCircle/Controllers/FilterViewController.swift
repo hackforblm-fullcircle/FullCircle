@@ -10,10 +10,15 @@ import UIKit
 
 class FilterViewController: UIViewController {
     
-    var filterTableView: UITableView = {
+    lazy var filterTableView: UITableView = {
         let tableView = UITableView()
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.separatorStyle = .none
         return tableView
     }()
+    
+    //TODO: create cancel + apply buttons in nav bar
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +38,7 @@ class FilterViewController: UIViewController {
             filterTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
-        
+    
+    
 
 }
