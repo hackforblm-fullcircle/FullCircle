@@ -31,7 +31,7 @@ Ability to save actions.
   - Connect with friends to see each others future/past actions
   - History/Progress meter with amount and types of actions taken
 - For organizations:
-  - In-app actions
+  - Web-based platform to register in-app actions
   - Ability to list partner organizations to co-host actions (removes duplicity in action creation)
 
 
