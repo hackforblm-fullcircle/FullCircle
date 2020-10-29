@@ -10,6 +10,7 @@ import UIKit
 
 class FilterViewController: UIViewController {
     
+    //MARK: - UI Objects
     lazy var filterTableView: UITableView = {
         let tableView = UITableView()
         tableView.dataSource = self
