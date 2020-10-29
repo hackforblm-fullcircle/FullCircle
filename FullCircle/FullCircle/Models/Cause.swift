@@ -9,5 +9,10 @@
 import Foundation
 
 enum Cause: String {
-    case race = "Race"
+    case cause1
+    case cause2
+    case cause3
+    case cause4
+    case cause5
+
 }
