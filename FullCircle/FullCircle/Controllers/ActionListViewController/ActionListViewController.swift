@@ -124,7 +124,7 @@ class ActionListViewController: UIViewController {
     }
     
     private func setFilterButton() {
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "bookmark"), style: .plain, target: self, action: #selector(filterButtonPressed))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "slider.horizontal.3"), style: .plain, target: self, action: #selector(filterButtonPressed))
     }
 
     
