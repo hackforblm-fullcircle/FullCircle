@@ -19,27 +19,31 @@ class FilterViewController: UIViewController {
         return tableView
     }()
     
+    lazy var applyButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Apply", for: .normal)
+        button.backgroundColor = FCDesign.fadedBlue
+        button.isUserInteractionEnabled = true
+        button.addTarget(self, action: #selector(applyButtonPressed), for: .touchUpInside)
+        return button
+    }()
+    
     //TODO: create cancel + apply buttons in nav bar
     
+    //MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setUpFilterTableView()
+        addSubviews()
+        addConstraints()
     }
     
+    //MARK: - Objective-C Functions
+    @objc func applyButtonPressed() {
+        print("apply button pressed")
+    }
 
-    func setUpFilterTableView() {
-        view.addSubview(filterTableView)
-        filterTableView.translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint.activate([
-            filterTableView.topAnchor.constraint(equalTo: view.topAnchor),
-            filterTableView.leftAnchor.constraint(equalTo: view.leftAnchor),
-            filterTableView.rightAnchor.constraint(equalTo: view.rightAnchor),
-            filterTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-        ])
-    }
-    
+    //MARK: - Private Functions
     
 
 }
