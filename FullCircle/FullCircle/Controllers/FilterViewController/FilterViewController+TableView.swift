@@ -17,8 +17,7 @@ extension FilterViewController: UITableViewDataSource {
         switch indexPath.row {
         case 0:
             // Cause
-            let causeCell = UITableViewCell()
-            causeCell.backgroundColor = .red
+            let causeCell = FilterCauseTableViewCell()
             return causeCell
         case 1:
             // Action Type
