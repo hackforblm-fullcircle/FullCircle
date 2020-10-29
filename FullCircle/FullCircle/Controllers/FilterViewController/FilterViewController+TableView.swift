@@ -25,8 +25,7 @@ extension FilterViewController: UITableViewDataSource {
             return actionCell
         case 2:
             // Date
-            let dateCell = UITableViewCell()
-            dateCell.backgroundColor = .blue
+            let dateCell = FilterDateTableViewCell()
             return dateCell
         default:
             return UITableViewCell()
