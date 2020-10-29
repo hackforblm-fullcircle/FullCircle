@@ -20,6 +20,7 @@
 		957DC29F2523CE7F00B12AF2 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957DC29E2523CE7F00B12AF2 /* FilterViewController.swift */; };
 		957DC2C52526583100B12AF2 /* FilterViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957DC2C42526583100B12AF2 /* FilterViewController+TableView.swift */; };
 		958C44AE254B587F00117E56 /* FilterCauseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958C44AD254B587F00117E56 /* FilterCauseTableViewCell.swift */; };
+		958C44B4254B5EBC00117E56 /* FilterActionTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958C44B3254B5EBC00117E56 /* FilterActionTypeTableViewCell.swift */; };
 		EA241A8D24D0847E00A8CBC8 /* AppUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA241A8C24D0847E00A8CBC8 /* AppUser.swift */; };
 		EA241A8F24D08A6B00A8CBC8 /* UserAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA241A8E24D08A6B00A8CBC8 /* UserAction.swift */; };
 		EA241A9124D08B2C00A8CBC8 /* Cause.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA241A9024D08B2C00A8CBC8 /* Cause.swift */; };
@@ -97,6 +98,7 @@
 		957DC29E2523CE7F00B12AF2 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		957DC2C42526583100B12AF2 /* FilterViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FilterViewController+TableView.swift"; sourceTree = "<group>"; };
 		958C44AD254B587F00117E56 /* FilterCauseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCauseTableViewCell.swift; sourceTree = "<group>"; };
+		958C44B3254B5EBC00117E56 /* FilterActionTypeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterActionTypeTableViewCell.swift; sourceTree = "<group>"; };
 		AF64500D599452C845188048 /* Pods-FullCircleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FullCircleTests.release.xcconfig"; path = "Target Support Files/Pods-FullCircleTests/Pods-FullCircleTests.release.xcconfig"; sourceTree = "<group>"; };
 		CCE30EF293F3F7F561CD27A0 /* Pods-FullCircleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FullCircleTests.debug.xcconfig"; path = "Target Support Files/Pods-FullCircleTests/Pods-FullCircleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EA241A8C24D0847E00A8CBC8 /* AppUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUser.swift; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				958C44AD254B587F00117E56 /* FilterCauseTableViewCell.swift */,
+				958C44B3254B5EBC00117E56 /* FilterActionTypeTableViewCell.swift */,
 			);
 			path = FilterTVCells;
 			sourceTree = "<group>";
@@ -649,6 +652,7 @@
 				958C44AE254B587F00117E56 /* FilterCauseTableViewCell.swift in Sources */,
 				EA2B42CF24967AD100136D4F /* FCHeaderLabel.swift in Sources */,
 				EA2B42D52496814700136D4F /* FCBodyLabel.swift in Sources */,
+				958C44B4254B5EBC00117E56 /* FilterActionTypeTableViewCell.swift in Sources */,
 				EAE711942495759300418D64 /* ActionListViewController+Buttons.swift in Sources */,
 				EAE711922495707700418D64 /* ActionListTableViewCell+Constraints.swift in Sources */,
 				EA2B42BC2495B7DB00136D4F /* ProfileViewController.swift in Sources */,

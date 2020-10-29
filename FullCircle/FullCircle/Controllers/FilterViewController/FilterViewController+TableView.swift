@@ -21,8 +21,7 @@ extension FilterViewController: UITableViewDataSource {
             return causeCell
         case 1:
             // Action Type
-            let actionCell = UITableViewCell()
-            actionCell.backgroundColor = .black
+            let actionCell = FilterActionTypeTableViewCell()
             return actionCell
         case 2:
             // Date
