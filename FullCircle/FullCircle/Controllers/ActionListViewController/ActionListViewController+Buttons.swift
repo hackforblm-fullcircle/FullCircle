@@ -26,6 +26,6 @@ extension ActionListViewController {
     
     @objc func filterButtonPressed() {
         let filterVC = FilterViewController()
-        navigationController?.pushViewController(filterVC, animated: false)
+        self.present(filterVC, animated: true, completion: nil)
     }
 }
